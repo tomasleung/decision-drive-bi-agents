@@ -8,6 +8,8 @@ The agent follows the Decision-Driven BI Framework and ensures report design beg
 
 The output becomes the governing design contract for all downstream agents.
 
+Active skill file: `skill.md`
+
 ---
 
 # Question Answered
