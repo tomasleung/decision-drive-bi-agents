@@ -568,6 +568,20 @@ Template Version Identified
 
 Template Structure Preserved
 ```
+ 
+---
+
+## Template Selection Clarification
+
+If no candidate template filename includes an explicit status tag (for example, `APPROVED`, `PRODUCTION_READY`, `FROZEN`), the agent will:
+
+- prefer files that pass Purpose Validation and contain the expected template headings (e.g., `Writer guidance`, `STEP 01`, `SIGNAL MATRIX`), and
+- select the highest semantic version among those validated candidates as the effective template.
+
+This fallback ensures newly added template files (for example `*_v3.0.md`) are discovered and used without requiring a separate status token in the filename, while still enforcing purpose validation and structural checks.
+
+If multiple candidates share the same semantic version and pass validation, the agent will prefer the file whose metadata or header indicates `Resolved Templates` or explicit `Writer guidance` content. If ambiguity persists the agent will report candidates and stop for operator selection.
+
 ---
 # Approved Templates
 
