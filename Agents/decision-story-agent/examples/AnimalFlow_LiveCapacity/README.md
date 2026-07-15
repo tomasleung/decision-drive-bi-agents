@@ -1,16 +1,25 @@
 # Animal Flow — Live Capacity Reporting
-## Semantic Design Agent Reference Example
+## Decision Story Agent Reference Example
 
 ---
 
 # Purpose
 
-This example demonstrates a complete execution
-of the Semantic Design Agent using the
-Animal Flow — Live Capacity Reporting capability.
+This example demonstrates a complete execution of the Decision Story Agent using the:
 
-This example serves as the official reference implementation
-for Semantic Design Agent v1.0.
+```text
+Animal Flow — Live Capacity Reporting
+```
+
+business capability.
+
+The example serves as the official reference implementation for:
+
+```text
+Decision Story Agent v1.0
+```
+
+within the Decision-Driven BI Framework.
 
 ---
 
@@ -24,11 +33,50 @@ Animal Flow — Live Capacity Reporting
 
 # Business Problem
 
+Animal Flow requires the ability to safely place incoming animals across BC SPCA Community Animal Centres.
+
+The organization needs a consistent decision-making process to determine:
+
 ```text
-Determine which centres can safely receive
-incoming animals based on capacity,
-utilization, operational status,
-and data quality.
+Which centres can receive animals?
+
+Which centres require intervention?
+
+Which centres should be avoided?
+
+Which regions are under capacity pressure?
+
+Can the operational data be trusted?
+```
+
+Without a structured decision framework, placement decisions become:
+
+```text
+Manual
+
+Subjective
+
+Inconsistent
+
+Difficult To Scale
+```
+
+---
+
+# Business Goal
+
+Create a decision-driven reporting solution that allows Animal Flow teams to:
+
+```text
+Monitor Capacity
+
+Identify Placement Opportunities
+
+Detect Operational Risks
+
+Validate Data Quality
+
+Take Action Quickly
 ```
 
 ---
@@ -36,64 +84,282 @@ and data quality.
 # Primary Decision
 
 ```text
-Which centres currently have sufficient capacity
-to support incoming animals?
+Which centres currently have sufficient
+capacity to support incoming animals?
+```
+
+---
+
+# Secondary Decisions
+
+```text
+Which centres require intervention?
+
+Which centres should be prioritized?
+
+Which centres should be avoided?
+
+Which centres have data quality concerns?
+
+Which regions are experiencing capacity pressure?
 ```
 
 ---
 
 # Inputs Used
 
-## Required
-
-```text
-REPORT_STORY_v1.0.md
-
-TRD_v1.0.md
-```
-
-## Reference
+## Required Input
 
 ```text
 INPUT_BRD_AnimalFlow_LiveCapacity_v2.0.md
+```
 
-REPORT_STORY_MATRIX_v1.0.md
+Purpose:
+
+```text
+Business Requirements
+
+Business Context
+
+Business Goals
+
+Decision Requirements
+
+Success Criteria
 ```
 
 ---
 
 # Outputs Generated
 
+## Output 01
+
 ```text
-DATA_MODEL_MATRIX_v1.0.md
+REPORT_STORY_MATRIX_v1.0.md
+```
 
-SEMANTIC_MODEL_SPEC_v1.0.md
+Purpose:
 
-MEASURE_CONTRACT_v1.0.md
+```text
+Decision Framework Validation
+```
+
+Demonstrates:
+
+```text
+Decision Identification
+
+Business Question Mapping
+
+Signal Identification
+
+Threshold Design
+
+Action Design
+
+Story Validation
 ```
 
 ---
 
-# Validation Status
+## Output 02
+
+```text
+REPORT_STORY_v1.0.md
+```
+
+Purpose:
+
+```text
+Decision Story Contract (DSC)
+```
+
+Demonstrates:
+
+```text
+Decision Model
+
+Business Logic
+
+Narrative Story
+
+Story Flow
+
+Page Design
+
+Visual Recommendations
+
+Business Journey
+```
+
+---
+
+# Questions Answered
+
+The generated artifacts successfully answer:
+
+```text
+What is happening?
+
+What requires attention?
+
+Which centres can safely receive animals?
+
+Why should a centre be selected?
+
+Can the information be trusted?
+
+What action should occur next?
+```
+
+---
+
+# Framework Concepts Demonstrated
+
+## Decision-Driven BI
+
+Demonstrates:
+
+```text
+Decision First
+
+Question Second
+
+Signal Third
+
+Visualization Last
+```
+
+---
+
+## Decision Traceability
+
+Demonstrates:
+
+```text
+Decision
+
+↓
+
+Business Question
+
+↓
+
+Signal
+
+↓
+
+Threshold
+
+↓
+
+Action
+
+↓
+
+Story
+```
+
+traceability.
+
+---
+
+## Story Design
+
+Demonstrates:
+
+```text
+Narrative Design
+
+Story Ordering
+
+Business Journey
+
+Decision Support
+
+Action-Oriented Reporting
+```
+
+---
+
+# Learning Objectives
+
+By reviewing this example, a reader should understand:
+
+```text
+How to identify business decisions
+
+How to define business questions
+
+How to identify actionable signals
+
+How to define thresholds
+
+How to define actions
+
+How to build a decision story
+
+How to create a Decision Story Contract
+```
+
+---
+
+# Validation Result
+
+Status:
 
 ```text
 PASS
 ```
 
----
-
-# Key Learnings
+Validated Areas:
 
 ```text
-Decision Traceability Model Validated
+Decision Coverage
 
-Fact Identification Process Validated
+Question Coverage
 
-Dimension Identification Process Validated
+Signal Coverage
 
-Measure Governance Process Validated
+Threshold Coverage
 
-Fabric-Oriented Semantic Modeling Validated
+Action Coverage
+
+Story Consistency
+
+Narrative Consistency
+
+Decision Traceability
+```
+
+---
+
+# Example Deliverables
+
+## Inputs
+
+```text
+INPUT_BRD_AnimalFlow_LiveCapacity_v2.0.md
+```
+
+---
+
+## Outputs
+
+```text
+REPORT_STORY_MATRIX_v1.0.md
+
+REPORT_STORY_v1.0.md
+```
+
+---
+
+## Supporting Files
+
+```text
+README.md
+
+REVIEW_NOTES.md
 ```
 
 ---
@@ -103,27 +369,95 @@ Fabric-Oriented Semantic Modeling Validated
 This example was used to validate:
 
 ```text
-DATA_MODEL_STANDARDS_v1.0
+REPORT_DESIGN_STANDARDS_v1.0
 
-08_DATA_MODEL_MATRIX_TEMPLATE_v1.0
+01_REPORT_STORY_MATRIX_TEMPLATE_v1.0
 
-09_SEMANTIC_MODEL_SPEC_TEMPLATE_v1.0
+02_REPORT_STORY_TEMPLATE_v1.0
 
-10_MEASURE_CONTRACT_TEMPLATE_v1.0
+DECISION_STORY_GUIDELINES_v1.0
 
-SEMANTIC_DESIGN_GUIDELINES_v1.0
-
-SEMANTIC_DESIGN_AGENT_v1.0
+Decision Story Agent v1.0
 ```
 
 ---
 
-# Status
+# Production Status
 
 ```text
 Approved Reference Example
 
-Production Validation Example
+Validated Example
 
-Semantic Design Agent v1.0
+Training Example
+
+Framework Baseline Example
 ```
+
+---
+
+# Relationship To Downstream Agents
+
+The outputs generated by this example become inputs to:
+
+```text
+Mockup Agent
+
+↓
+
+TRD Agent
+
+↓
+
+Semantic Design Agent
+
+↓
+
+Future Build Agents
+```
+
+This example therefore represents the starting point of the complete:
+
+```text
+Business Design
+
+↓
+
+Technical Design
+
+↓
+
+Semantic Design
+
+↓
+
+Semantic Build
+
+↓
+
+Report Build
+```
+
+framework.
+
+---
+
+# Success Statement
+
+This example succeeds when a reader can understand:
+
+```text
+How business requirements become decisions
+
+How decisions become questions
+
+How questions become signals
+
+How signals become actions
+
+How actions become a business story
+```
+
+without requiring additional explanation.
+
+The result is a reusable, governed reference implementation for all future Decision Story Agent executions.

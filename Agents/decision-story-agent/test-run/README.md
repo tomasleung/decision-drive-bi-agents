@@ -1,99 +1,606 @@
-# Test Run Folder
-
-## Purpose
-
-Contains inputs and expected outputs used for validating the Decision Story Agent.
-
-This folder proves that the agent behaves consistently and follows approved standards and templates.
+# Test Run
+## Decision Story Agent
 
 ---
 
-# Test Process
+# Purpose
+
+This folder contains validation executions performed against the Decision Story Agent.
+
+Test Runs verify that:
 
 ```text
-Input
+Standards
+
+Templates
+
+Guidelines
+
+skill.md
+```
+
+work together correctly and consistently produce governed Decision Story artifacts.
+
+The primary objective of a Test Run is to prove that the agent can repeatedly transform:
+
+```text
+Business Requirements
+
 ↓
-Decision Story Agent
+
+Decision Design
+
 ↓
-Expected Output
+
+Story Design
+
+↓
+
+Decision Story Contract
+```
+
+using approved framework components.
+
+---
+
+# Test Run Objectives
+
+A Test Run validates:
+
+```text
+Business Traceability
+
+Decision Modeling
+
+Question Modeling
+
+Signal Design
+
+Threshold Design
+
+Action Design
+
+Story Design
+
+Agent Workflow
+
+Framework Governance
+```
+
+before releasing an agent for production use.
+
+---
+
+# Current Test Runs
+
+## Test_Run_01_AnimalFlow
+
+Status:
+
+```text
+PASS
+```
+
+Purpose:
+
+```text
+Validate the Decision Story Agent
+using the Animal Flow — Live Capacity Reporting capability.
 ```
 
 ---
 
-# Current Test Scenario
+# Test Run Structure
 
-## Animal Flow — Live Capacity Reporting
+```text
+Test_Run_01_AnimalFlow/
 
-Input
+README.md
+
+REVIEW_NOTES.md
+
+inputs/
+
+outputs/
+```
+
+---
+
+# Inputs
+
+## Required Inputs
 
 ```text
 INPUT_BRD_AnimalFlow_LiveCapacity_v2.0.md
 ```
 
-Expected Outputs
+Purpose:
 
 ```text
-OUTPUT_REPORT_STORY_MATRIX_v1.0.md
+Business Requirements
 
-OUTPUT_REPORT_STORY_v1.0.md
+Business Context
+
+Business Goals
+
+Business Decisions
+
+Business Questions
+
+Success Criteria
 ```
 
 ---
 
-# Validation Objectives
+# Generated Outputs
 
-Validate:
+## Output 01
 
 ```text
-Decision Extraction
+REPORT_STORY_MATRIX_v1.0.md
+```
 
-Question Identification
+Validation Result:
 
-Signal Mapping
+```text
+PASS
+```
 
-Threshold Mapping
+Validated:
 
-Action Mapping
+```text
+Decision Coverage
 
-Story Design
+Question Coverage
+
+Signal Coverage
+
+Threshold Coverage
+
+Action Coverage
+
+Story Coverage
+```
+
+---
+
+## Output 02
+
+```text
+REPORT_STORY_v1.0.md
+```
+
+Validation Result:
+
+```text
+PASS
+```
+
+Validated:
+
+```text
+Decision Modeling
+
+Narrative Design
+
+Story Flow
 
 Layout Blueprint
 
 Visual Recommendations
+
+Business Journey Design
 ```
 
 ---
 
-# Pass Criteria
+# Validation Results
 
-The generated outputs should:
+## Decision Modeling
+
+Result:
 
 ```text
-Match Template Structure
+PASS
+```
 
-Follow REPORT_DESIGN_STANDARDS
+Validated:
 
-Support Business Decisions
+```text
+Primary Decision
 
-Support Operational Actions
+Secondary Decisions
+
+Decision Ownership
+
+Decision Frequency
+
+Decision Success Criteria
 ```
 
 ---
 
-# Future Tests
+## Business Question Modeling
 
-Additional BRDs should be added to validate:
+Result:
 
 ```text
-Finance
-
-Fundraising
-
-Volunteer Management
-
-Operations
-
-Executive Reporting
+PASS
 ```
 
-to ensure the agent behaves consistently across domains.
+Validated:
+
+```text
+Placement Questions
+
+Capacity Questions
+
+Data Quality Questions
+
+Regional Questions
+```
+
+---
+
+## Signal Modeling
+
+Result:
+
+```text
+PASS
+```
+
+Validated:
+
+```text
+Placement Signals
+
+Operational Signals
+
+Regional Signals
+
+Data Trust Signals
+```
+
+---
+
+## Threshold Modeling
+
+Result:
+
+```text
+PASS
+```
+
+Validated:
+
+```text
+Healthy States
+
+Warning States
+
+Critical States
+
+Action Triggers
+```
+
+---
+
+## Action Modeling
+
+Result:
+
+```text
+PASS
+```
+
+Validated:
+
+```text
+Recommended Actions
+
+Operational Actions
+
+Governance Actions
+
+Decision Actions
+```
+
+---
+
+## Story Design
+
+Result:
+
+```text
+PASS
+```
+
+Validated:
+
+```text
+Narrative Structure
+
+Story Sequencing
+
+Decision Journey
+
+Business Journey
+
+Action-Oriented Reporting
+```
+
+---
+
+# Framework Validation
+
+## Standards
+
+```text
+PASS
+```
+
+---
+
+## Templates
+
+```text
+PASS
+```
+
+---
+
+## Guidelines
+
+```text
+PASS
+```
+
+---
+
+## skill.md
+
+```text
+PASS
+```
+
+---
+
+## Agent Workflow
+
+```text
+PASS
+```
+
+---
+
+# Validation Checklist
+
+```text
+✓ Primary Decision Identified
+
+✓ Secondary Decisions Identified
+
+✓ Business Questions Defined
+
+✓ Signals Defined
+
+✓ Thresholds Defined
+
+✓ Actions Defined
+
+✓ Story Flow Created
+
+✓ Narrative Structure Defined
+
+✓ Layout Blueprint Defined
+
+✓ Visual Recommendations Defined
+
+✓ Decision Traceability Preserved
+```
+
+---
+
+# Key Outcomes
+
+## Outcome 01
+
+```text
+Decision-Driven BI methodology
+successfully translated business
+requirements into a governed
+decision framework.
+```
+
+---
+
+## Outcome 02
+
+```text
+The REPORT_STORY_MATRIX
+proved to be an effective
+business review checkpoint.
+```
+
+---
+
+## Outcome 03
+
+```text
+The Decision Story Contract
+successfully preserved business intent
+for downstream agents.
+```
+
+---
+
+## Outcome 04
+
+```text
+Business decisions remained traceable
+through questions, signals,
+thresholds, actions, and stories.
+```
+
+---
+
+# Deliverables Generated
+
+```text
+REPORT_STORY_MATRIX_v1.0.md
+
+REPORT_STORY_v1.0.md
+
+REVIEW_NOTES.md
+```
+
+---
+
+# Lessons Learned
+
+High-Level Findings:
+
+```text
+Decision-first design improves
+story clarity.
+
+Business questions naturally drive
+signal discovery.
+
+Signals naturally drive thresholds
+and actions.
+
+Story sections are strongest when
+each section answers a specific
+business question.
+```
+
+See:
+
+```text
+REVIEW_NOTES.md
+```
+
+for detailed observations.
+
+---
+
+# Production Readiness Decision
+
+Assessment:
+
+```text
+Decision Story Agent v1.0
+```
+
+Decision:
+
+```text
+APPROVED
+```
+
+Status:
+
+```text
+PRODUCTION READY
+
+FRAMEWORK BASELINE
+
+FROZEN
+```
+
+---
+
+# Framework Impact
+
+This test run successfully validates:
+
+```text
+REPORT_DESIGN_STANDARDS_v1.0
+
+01_REPORT_STORY_MATRIX_TEMPLATE_v1.0
+
+02_REPORT_STORY_TEMPLATE_v1.0
+
+DECISION_STORY_GUIDELINES_v1.0
+
+Decision Story Agent v1.0
+```
+
+and establishes the first validated phase of the:
+
+```text
+Decision-Driven BI Framework
+```
+
+---
+
+# Relationship To Framework
+
+The outputs generated by this test run become inputs to:
+
+```text
+Mockup Agent
+
+↓
+
+TRD Agent
+
+↓
+
+Semantic Design Agent
+
+↓
+
+Future Build Agents
+```
+
+This Test Run therefore validates the starting point of the complete framework:
+
+```text
+Business Design
+
+↓
+
+Technical Design
+
+↓
+
+Semantic Design
+
+↓
+
+Semantic Build
+
+↓
+
+Report Build
+```
+
+---
+
+# Success Statement
+
+Test_Run_01_AnimalFlow succeeds when:
+
+```text
+The Decision Story Agent
+
+can transform approved business
+requirements into governed
+decision design artifacts
+
+without requiring technical modeling
+or implementation activities.
+```
+
+Outcome:
+
+```text
+PASS
+
+Production Ready
+
+Approved Validation Run
+```

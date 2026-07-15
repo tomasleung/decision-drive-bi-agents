@@ -1,6 +1,6 @@
 # REVIEW_NOTES.md
 ## Test_Run_01_AnimalFlow
-### Semantic Design Agent Validation Review
+### Decision Story Agent Validation Review
 
 ---
 
@@ -9,7 +9,7 @@
 Agent
 
 ```text
-Semantic Design Agent v1.0
+Decision Story Agent v1.0
 ```
 
 ---
@@ -25,7 +25,7 @@ Test_Run_01_AnimalFlow
 Review Type
 
 ```text
-Framework Validation
+Framework Validation Review
 ```
 
 ---
@@ -43,47 +43,61 @@ PASS
 The purpose of this review was to validate:
 
 ```text
-DATA_MODEL_STANDARDS_v1.0
+REPORT_DESIGN_STANDARDS_v1.0
 
-08_DATA_MODEL_MATRIX_TEMPLATE_v1.0
+01_REPORT_STORY_MATRIX_TEMPLATE_v1.0
 
-09_SEMANTIC_MODEL_SPEC_TEMPLATE_v1.0
+02_REPORT_STORY_TEMPLATE_v1.0
 
-10_MEASURE_CONTRACT_TEMPLATE_v1.0
+DECISION_STORY_GUIDELINES_v1.0
 
-SEMANTIC_DESIGN_GUIDELINES_v1.0
-
-SEMANTIC_DESIGN_AGENT_v1.0
+Decision Story Agent v1.0
 ```
 
 using a real business capability.
 
 ---
 
-# Validation Summary
+# Validation Scope
 
-## Inputs Reviewed
+Validated Components:
 
 ```text
-REPORT_STORY_v1.0.md
+Decision Modeling
 
-TRD_v1.0.md
+Question Modeling
 
-REPORT_STORY_MATRIX_v1.0.md
+Signal Modeling
 
+Threshold Modeling
+
+Action Modeling
+
+Story Modeling
+
+Narrative Design
+
+Layout Blueprint Design
+
+Visual Recommendation Design
+```
+
+---
+
+# Inputs Reviewed
+
+```text
 INPUT_BRD_AnimalFlow_LiveCapacity_v2.0.md
 ```
 
 ---
 
-## Outputs Generated
+# Outputs Generated
 
 ```text
-DATA_MODEL_MATRIX_v1.0.md
+REPORT_STORY_MATRIX_v1.0.md
 
-SEMANTIC_MODEL_SPEC_v1.0.md
-
-MEASURE_CONTRACT_v1.0.md
+REPORT_STORY_v1.0.md
 ```
 
 ---
@@ -92,7 +106,7 @@ MEASURE_CONTRACT_v1.0.md
 
 ## Finding 01
 
-### Decision Traceability
+### Decision-First Design Validated
 
 Result
 
@@ -102,9 +116,41 @@ PASS
 
 Observation
 
-```text
-All measures successfully traced back to:
+The generated outputs successfully began with:
 
+```text
+Business Decisions
+```
+
+before considering:
+
+```text
+Story
+
+Layout
+
+Visual Design
+```
+
+This confirms alignment with the Decision-Driven BI philosophy.
+
+---
+
+## Finding 02
+
+### Decision Traceability Validated
+
+Result
+
+```text
+PASS
+```
+
+Observation
+
+The following traceability chain was preserved:
+
+```text
 Decision
 
 ↓
@@ -117,37 +163,24 @@ Signal
 
 ↓
 
-Measure
+Threshold
+
+↓
+
+Action
+
+↓
+
+Story
 ```
 
-No orphan measures identified.
-
----
-
-## Finding 02
-
-### Grain-First Modeling
-
-Result
-
-```text
-PASS
-```
-
-Observation
-
-```text
-Fact tables were identified after
-business grain was declared.
-```
-
-Framework behaved as designed.
+No orphan story components were identified.
 
 ---
 
 ## Finding 03
 
-### Fact Identification
+### Business Question Discovery Validated
 
 Result
 
@@ -157,23 +190,25 @@ PASS
 
 Observation
 
-The framework correctly identified:
+The generated question structure successfully captured:
 
 ```text
-Fact_Capacity
+Placement Questions
 
-Fact_Occupancy
+Capacity Questions
 
-Fact_Confirmation
+Data Quality Questions
+
+Regional Questions
 ```
 
-from business requirements.
+and maintained alignment with the primary decision.
 
 ---
 
 ## Finding 04
 
-### Dimension Identification
+### Signal Design Validated
 
 Result
 
@@ -183,25 +218,25 @@ PASS
 
 Observation
 
-The framework correctly identified:
+Signals were successfully grouped into:
 
 ```text
-Dim_Centre
+Placement Signals
 
-Dim_Date
+Operational Signals
 
-Dim_AnimalType
+Regional Signals
 
-Dim_Region
+Data Trust Signals
 ```
 
-using analysis requirements rather than source structures.
+Each signal supported at least one business question.
 
 ---
 
 ## Finding 05
 
-### Measure Governance
+### Threshold And Action Design Validated
 
 Result
 
@@ -211,19 +246,167 @@ PASS
 
 Observation
 
-Measures were successfully governed through:
+Thresholds successfully translated into operational actions.
+
+Examples included:
 
 ```text
-Business Definitions
+Review Before Routing
 
-Threshold Logic
+Do Not Intake
 
-Action Rules
+Candidate Centre
 
-Dependencies
+Contact Centre
 
-Decision Mapping
+Data Cleanup Required
 ```
+
+This created a clear path from information to action.
+
+---
+
+## Finding 06
+
+### Story Design Validated
+
+Result
+
+```text
+PASS
+```
+
+Observation
+
+The final story structure created a logical operating sequence:
+
+```text
+Provincial Capacity Snapshot
+
+↓
+
+Action Required
+
+↓
+
+Intake Readiness
+
+↓
+
+Placement Decision Board
+
+↓
+
+Capacity Analysis
+
+↓
+
+Data Trust
+
+↓
+
+Regional Health
+
+↓
+
+Operational Briefing
+```
+
+The flow naturally supports operational decision making.
+
+---
+
+## Finding 07
+
+### Business Journey Validated
+
+Result
+
+```text
+PASS
+```
+
+Observation
+
+The generated report story consistently guided users through:
+
+```text
+Situation
+
+↓
+
+Risk
+
+↓
+
+Eligibility
+
+↓
+
+Decision
+
+↓
+
+Validation
+
+↓
+
+Action
+```
+
+rather than presenting disconnected metrics.
+
+---
+
+# Strengths Identified
+
+## Strength 01
+
+```text
+Strong Primary Decision
+```
+
+The business objective remained clear throughout all outputs.
+
+---
+
+## Strength 02
+
+```text
+Strong Decision Traceability
+```
+
+All story components could be traced back to business needs.
+
+---
+
+## Strength 03
+
+```text
+Action-Oriented Reporting
+```
+
+The design consistently promoted user action rather than passive reporting.
+
+---
+
+## Strength 04
+
+```text
+Good Separation Of Concerns
+```
+
+Business Design remained separate from:
+
+```text
+Technical Design
+
+Semantic Design
+
+Report Development
+```
+
+which aligns with the framework architecture.
 
 ---
 
@@ -234,14 +417,18 @@ Decision Mapping
 Artifact
 
 ```text
-DATA_MODEL_MATRIX
+REPORT_STORY_MATRIX
 ```
 
 Recommendation
 
+Add an optional:
+
 ```text
-Add optional Decision Owner field.
+Decision Owner Matrix
 ```
+
+for future enterprise governance scenarios.
 
 Priority
 
@@ -256,14 +443,18 @@ Low
 Artifact
 
 ```text
-SEMANTIC_MODEL_SPEC
+REPORT_STORY
 ```
 
 Recommendation
 
+Add an optional:
+
 ```text
-Add optional Calculation Ownership Mapping section.
+Executive Summary Section
 ```
+
+for large-scale reporting initiatives.
 
 Priority
 
@@ -275,28 +466,22 @@ Low
 
 ## Improvement 03
 
-Artifact
-
-```text
-MEASURE_CONTRACT
-```
+Framework
 
 Recommendation
 
+Introduce a future:
+
 ```text
-Provide additional examples for:
-
-Base Measures
-
-Derived Measures
-
-Presentation Measures
+Question-To-Artifact Matrix
 ```
+
+within the governing architecture documentation.
 
 Priority
 
 ```text
-Low
+Completed In Framework v2.1
 ```
 
 ---
@@ -335,7 +520,7 @@ PASS
 
 ---
 
-## Workflow
+## Agent Workflow
 
 ```text
 PASS
@@ -348,8 +533,15 @@ PASS
 ## Lesson 01
 
 ```text
-REPORT_STORY should remain
-the primary business input.
+Separating Decision Validation
+from Story Design improves review quality.
+```
+
+Reason:
+
+```text
+Stakeholders can approve business logic
+before reviewing narrative design.
 ```
 
 ---
@@ -357,8 +549,15 @@ the primary business input.
 ## Lesson 02
 
 ```text
-TRD provides sufficient technical
-detail for semantic discovery.
+Business questions are the strongest bridge
+between decisions and report stories.
+```
+
+Reason:
+
+```text
+Questions naturally drive signals,
+thresholds, and actions.
 ```
 
 ---
@@ -366,80 +565,163 @@ detail for semantic discovery.
 ## Lesson 03
 
 ```text
-The three-artifact architecture
-is sufficient.
+Every story section should answer
+a single business question.
 ```
 
-Outputs:
+Reason:
 
 ```text
-DATA_MODEL_MATRIX
-
-SEMANTIC_MODEL_SPEC
-
-MEASURE_CONTRACT
+This improves clarity and reduces noise.
 ```
-
-No additional semantic design artifacts were required.
 
 ---
 
-# Validation Decision
+## Lesson 04
 
 ```text
-Semantic Design Agent v1.0
+Visual recommendations should remain
+business-focused and implementation-neutral.
+```
 
+Reason:
+
+```text
+Implementation belongs to downstream agents.
+```
+
+---
+
+# Architecture Assessment
+
+The validation confirms:
+
+```text
+Business Requirements
+
+↓
+
+Decision Framework
+
+↓
+
+Decision Story Contract
+```
+
+is an effective architecture for:
+
+```text
+Decision-Driven BI
+
+Operational Reporting
+
+Executive Reporting
+
+Action-Oriented Analytics
+```
+
+---
+
+# Production Readiness Decision
+
+Assessment
+
+```text
+Decision Story Agent v1.0
+```
+
+Status
+
+```text
 APPROVED
 
 PRODUCTION READY
 
-FROZEN
+FRAMEWORK BASELINE
 ```
+
+Decision
+
+```text
+Freeze Standards
+
+Freeze Templates
+
+Freeze Guidelines
+
+Freeze skill.md
+
+Freeze Agent Workflow
+```
+
+No critical issues identified.
+
+---
+
+# Framework Impact
+
+Animal Flow successfully validated:
+
+```text
+Decision Story Agent
+```
+
+and established the approved foundation for:
+
+```text
+Phase 01
+
+Business Design Layer
+```
+
+within the Decision-Driven BI Framework.
 
 ---
 
 # Recommended Next Step
 
 ```text
-Semantic Build Agent
+Mockup Agent
 ```
 
-Purpose:
+Purpose
 
 ```text
-Semantic Design
+Decision Story Contract
 
 ↓
 
-Build Specifications
+Business Mockup
 
 ↓
 
-Fabric Model Specifications
+SVG Prototype
 
 ↓
 
-Implementation Artifacts
+Business Review Package
 ```
 
 ---
 
 # Final Conclusion
 
-The Semantic Design Agent successfully transformed approved business and technical artifacts into governed semantic architecture while preserving:
+The Decision Story Agent successfully transformed business requirements into governed decision design artifacts while preserving:
 
 ```text
 Decision Intent
 
 Business Logic
 
-Signal Design
+Question Traceability
 
-Measure Governance
+Signal Traceability
 
-Semantic Traceability
+Action Orientation
+
+Story Consistency
 ```
 
-No critical issues were identified.
+No blocking issues were identified.
 
-Agent released to production status.
+The agent is approved as the official framework baseline for Business Design activities.
