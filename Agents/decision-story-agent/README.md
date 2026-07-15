@@ -10,37 +10,132 @@ The output becomes the governing design contract for all downstream agents.
 
 ---
 
+# Question Answered
+
+The Decision Story Agent exists to answer:
+
+```text
+What decisions should the report support?
+
+What business questions must be answered?
+
+What signals should be monitored?
+
+What thresholds define success or risk?
+
+What actions should users take?
+
+What story should the report tell?
+```
+
+---
+
+# Transformation
+
+```text
+BRD
+
+↓
+
+Decision Story Agent
+
+↓
+
+REPORT_STORY_MATRIX
+
+↓
+
+REPORT_STORY (DSC)
+```
+
+The Decision Story Agent transforms:
+
+```text
+Business Requirements
+
+↓
+
+Decision Design
+
+↓
+
+Story Design
+
+↓
+
+Decision Story Contract
+```
+
+---
+
 # Agent Position
 
 ```text
 BRD
+
 ↓
+
 Decision Story Agent
+
 ↓
+
 REPORT_STORY_MATRIX
+
 ↓
+
 REPORT_STORY (DSC)
 
 ↓
+
 Mockup Agent
-↓
-MOCKUP
-↓
-SVG
 
 ↓
-TRD Agent
+
+MOCKUP.md
+
 ↓
+
+MOCKUP.svg
+
+↓
+
+TRD Agent
+
+↓
+
 TRD
 
 ↓
+
 Semantic Design Agent
+
 ↓
+
 DATA_MODEL_MATRIX
+
 ↓
+
 SEMANTIC_MODEL_SPEC
+
 ↓
+
 MEASURE_CONTRACT
+
+↓
+
+Semantic Build Agent
+
+↓
+
+Fabric Semantic Model
+
+↓
+
+Report Build Agent
+
+↓
+
+Power BI Report
 ```
 
 ---
@@ -60,7 +155,9 @@ Business Requirements Document (BRD)
 ```text
 Business Problem
 
-Decisions
+Business Goals
+
+Business Decisions
 
 Business Questions
 
@@ -68,9 +165,13 @@ Signals
 
 Thresholds
 
-Success Criteria
+Actions
 
 Stakeholders
+
+Success Criteria
+
+Constraints
 ```
 
 ---
@@ -89,28 +190,102 @@ Location:
 standards/
 ```
 
+Purpose:
+
+```text
+Decision Modeling
+
+Question Modeling
+
+Signal Identification
+
+Action Alignment
+
+Story Design Standards
+```
+
 ---
 
 # Templates
 
 The agent populates approved templates.
 
-Template 01
+## Template 01
 
 ```text
 REPORT_STORY_MATRIX_TEMPLATE_v1.0
 ```
 
-Template 02
+Purpose:
+
+```text
+Decision Validation
+
+Question Validation
+
+Signal Validation
+
+Threshold Validation
+
+Action Validation
+```
+
+---
+
+## Template 02
 
 ```text
 REPORT_STORY_TEMPLATE_v1.0
+```
+
+Purpose:
+
+```text
+Decision Story Contract
+
+Narrative Design
+
+Story Flow Design
+
+Layout Blueprint Design
+
+Visual Recommendation Design
 ```
 
 Location:
 
 ```text
 templates/
+```
+
+---
+
+# Guidelines
+
+The agent should follow:
+
+```text
+DECISION_STORY_GUIDELINES_v1.0
+```
+
+Location:
+
+```text
+guidelines/
+```
+
+Purpose:
+
+```text
+Decision Modeling Guidance
+
+Signal Design Guidance
+
+Story Design Guidance
+
+Narrative Design Guidance
+
+Validation Guidance
 ```
 
 ---
@@ -123,10 +298,34 @@ templates/
 REPORT_STORY_MATRIX_vX.X.md
 ```
 
-Purpose
+Purpose:
 
 ```text
-Validate the decision framework.
+Validate the Decision Framework
+```
+
+Documents:
+
+```text
+Decisions
+
+Business Questions
+
+Signals
+
+Thresholds
+
+Actions
+
+Story Flow
+```
+
+---
+
+### Key Question Answered
+
+```text
+What decisions should the report support?
 ```
 
 ---
@@ -137,10 +336,38 @@ Validate the decision framework.
 REPORT_STORY_vX.X.md
 ```
 
-Purpose
+Purpose:
 
 ```text
-Create the governing Decision Story Contract.
+Create the governing Decision Story Contract
+```
+
+Documents:
+
+```text
+Decision Model
+
+Business Logic
+
+Narrative Story
+
+Audience
+
+Story Flow
+
+Layout Blueprint
+
+Visual Recommendations
+
+Business Journey
+```
+
+---
+
+### Key Question Answered
+
+```text
+What story should the report tell?
 ```
 
 ---
@@ -149,26 +376,102 @@ Create the governing Decision Story Contract.
 
 ```text
 BRD
+
 ↓
+
 Decision Analysis
+
 ↓
+
 Business Questions
+
 ↓
-Signals
+
+Signal Analysis
+
 ↓
-Thresholds
+
+Threshold Analysis
+
 ↓
-Actions
+
+Action Analysis
+
 ↓
+
 Story Design
+
 ↓
+
+Narrative Structure
+
+↓
+
 Layout Blueprint
+
 ↓
+
 Visual Recommendations
+
 ↓
+
 REPORT_STORY_MATRIX
+
 ↓
+
 REPORT_STORY (DSC)
+```
+
+---
+
+# Validation
+
+The Decision Story Agent must validate:
+
+```text
+Decision Completeness
+
+Business Question Coverage
+
+Signal Coverage
+
+Threshold Coverage
+
+Action Coverage
+
+Story Consistency
+
+Narrative Consistency
+
+Decision Traceability
+```
+
+---
+
+# Approval Gate
+
+Approve:
+
+```text
+REPORT_STORY_MATRIX
+
+REPORT_STORY (DSC)
+```
+
+Approval confirms:
+
+```text
+Business Decisions Approved
+
+Business Questions Approved
+
+Signals Approved
+
+Thresholds Approved
+
+Actions Approved
+
+Story Approved
 ```
 
 ---
@@ -186,9 +489,83 @@ standards/
 
 templates/
 
+guidelines/
+
+inputs/
+
+outputs/
+
 test-run/
 
 examples/
+```
+
+---
+
+# Relationship Between Inputs and Outputs
+
+Inputs provide:
+
+```text
+Business Intent
+
+Business Context
+
+Decision Requirements
+```
+
+Outputs provide:
+
+```text
+Decision Framework
+
+Story Framework
+
+Design Contract
+```
+
+Transformation:
+
+```text
+Business Requirements
+
+↓
+
+Decision Requirements
+
+↓
+
+Business Story
+
+↓
+
+Design Contract
+```
+
+---
+
+# Production Status
+
+Version
+
+```text
+1.0
+```
+
+Status
+
+```text
+Production Ready
+```
+
+Validation
+
+```text
+Approved
+
+Framework Compliant
+
+Ready For Production Use
 ```
 
 ---
@@ -198,18 +575,50 @@ examples/
 The agent succeeds when:
 
 ```text
-Every Question
-supports a Decision
+Every Decision
+
+supports a Business Question
+
+Every Business Question
+
+supports a Signal
 
 Every Signal
-supports a Question
+
+supports a Threshold
+
+Every Threshold
+
+supports an Action
 
 Every Action
+
 supports a Decision
 
 Every Story Section
+
 supports User Action
 ```
+
+and stakeholders can answer:
+
+```text
+What is happening?
+
+Why is it happening?
+
+What requires attention?
+
+What decision must be made?
+
+What action should be taken?
+```
+
+without reviewing implementation details.
+
+---
+
+# Success Statement
 
 The final output must function as a:
 
@@ -222,3 +631,17 @@ rather than a:
 ```text
 Reporting Product
 ```
+
+The Decision Story Agent succeeds when approved business requirements are transformed into a governed Decision Story Contract that can guide:
+
+```text
+Mockup Design
+
+Technical Design
+
+Semantic Design
+
+Future Report Development
+```
+
+without revisiting the original business requirements.

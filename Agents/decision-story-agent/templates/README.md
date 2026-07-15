@@ -1,121 +1,187 @@
-# Templates Folder
-
-## Purpose
-
-Contains approved output templates used by the Decision Story Agent.
-
-Templates define the structure of deliverables.
-
-The agent populates the templates using information extracted from the BRD.
+# Templates
+## Decision Story Agent
 
 ---
 
-# Templates
+# Purpose
+
+This folder contains the official output templates used by the Decision Story Agent.
+
+Templates define:
+
+```text
+Document Structure
+
+Required Sections
+
+Required Metadata
+
+Review Requirements
+
+Approval Requirements
+```
+
+Templates ensure generated artifacts remain:
+
+```text
+Consistent
+
+Repeatable
+
+Governed
+
+Auditable
+
+Reusable
+```
+
+across all Decision-Driven BI projects.
+
+---
+
+# Why Templates Exist
+
+The Decision Story Agent transforms:
+
+```text
+Business Requirements
+
+↓
+
+Decision Design
+
+↓
+
+Story Design
+
+↓
+
+Decision Story Artifacts
+```
+
+Without templates:
+
+```text
+Outputs become inconsistent
+
+Reviews become subjective
+
+Governance becomes difficult
+
+Traceability becomes unreliable
+```
+
+Templates provide a predictable structure for both humans and AI agents.
+
+---
+
+# Current Templates
 
 ## 01_REPORT_STORY_MATRIX_TEMPLATE_v1.0.md
 
-Generates
+Generates:
 
 ```text
 REPORT_STORY_MATRIX_vX.X.md
 ```
 
-Purpose
+Purpose:
 
-Provide a fast-review decision framework before creating the full Decision Story Contract.
+```text
+Validate the Decision Framework
+before creating the full
+Decision Story Contract.
+```
 
-Used For
+Used For:
 
 ```text
 Decision Validation
 
-Question Validation
+Business Question Validation
 
 Signal Validation
+
+Threshold Validation
 
 Action Validation
 
 Story Validation
 ```
 
+Answers:
+
+```text
+What decisions should the report support?
+
+What questions must be answered?
+
+What signals matter?
+
+What actions should occur?
+```
+
+Role:
+
+```text
+Business Validation Artifact
+```
+
 ---
 
 ## 02_REPORT_STORY_TEMPLATE_v1.0.md
 
-Generates
+Generates:
 
 ```text
 REPORT_STORY_vX.X.md
 ```
 
-Purpose
-
-Create the official Decision Story Contract (DSC).
-
-Used For
+Purpose:
 
 ```text
-Narrative Design
+Create the official
+Decision Story Contract (DSC).
+```
+
+Used For:
+
+```text
+Decision Modeling
 
 Business Logic
+
+Narrative Design
 
 Story Design
 
 Layout Design
 
-Visual Design
+Visual Recommendations
+
+Business Journey Design
+```
+
+Answers:
+
+```text
+What story should the report tell?
+
+How should users consume information?
+
+What actions should the report support?
+```
+
+Role:
+
+```text
+Decision Design Contract
 ```
 
 ---
 
-# Template Usage Rules
+# Template Sequence
 
-Templates must:
-
-```text
-Remain Version Controlled
-
-Remain Approved
-
-Remain Reusable
-```
-
----
-
-# Agent Rule
-
-Agents may:
+Templates must always be executed in the following order:
 
 ```text
-Populate Content
-```
-
-Agents may not:
-
-```text
-Remove Sections
-
-Rename Sections
-
-Reorder Sections
-
-Skip Mandatory Sections
-```
-
----
-
-# Governance
-
-Templates provide:
-
-```text
-Output Consistency
-
-Deterministic Structure
-
-Stakeholder Expectations
-
-Auditability
-```
-
-Every generated artifact should map back to an approved template.
