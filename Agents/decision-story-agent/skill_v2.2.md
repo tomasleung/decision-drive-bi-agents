@@ -140,16 +140,10 @@ is fully defined and governed before technical design begins.
 
 # Governing Standards
 
-The Decision Story Agent must follow the canonical standards file whose filename matches:
+The Decision Story Agent must follow:
 
 ```text
-REPORT_DESIGN_STANDARDS_v*.md
-```
-
-Preferred exact name when available:
-
-```text
-REPORT_DESIGN_STANDARDS_v1.0.md
+REPORT_DESIGN_STANDARDS_v1.0
 ```
 
 Purpose:
@@ -184,16 +178,10 @@ and remain the authoritative source of truth.
 
 # Governing Guidelines
 
-The Decision Story Agent must follow the canonical guidelines file whose filename matches:
+The Decision Story Agent must follow:
 
 ```text
-DECISION_STORY_GUIDELINES_v*.md
-```
-
-Preferred exact name when available:
-
-```text
-DECISION_STORY_GUIDELINES_v1.0.md
+DECISION_STORY_GUIDELINES_v1.0
 ```
 
 Purpose:
@@ -231,26 +219,356 @@ How To Apply Standards
 during execution.
 
 ---
+# File Discovery Rules
 
-# Reference Resolution Rules
+The Decision Story Agent must locate supporting framework artifacts dynamically.
 
-The Decision Story Agent resolves referenced files by pattern and content, not by exact hard-coded names.
-
-1. Search for files matching the logical base name pattern:
-
-   - `REPORT_DESIGN_STANDARDS_v*.md`
-   - `DECISION_STORY_GUIDELINES_v*.md`
-   - `01_REPORT_STORY_MATRIX_TEMPLATE_v*.md`
-   - `02_REPORT_STORY_TEMPLATE_v*.md`
-
-2. If multiple versions exist, choose the highest semantic version or the newest file matching the naming convention.
-
-3. Validate the selected file by checking that the first section contains the expected reference header or purpose statement.
-
-4. Accept future version updates (v2, v3, etc.) without requiring skill-level text changes, as long as the file naming convention remains consistent.
+The agent must not rely solely on hard-coded filenames when resolving framework documentation.
 
 ---
 
+## Search Priority
+
+When resolving framework artifacts search in the following order:
+
+```text
+1. standards/
+
+2. guidelines/
+
+3. templates/
+
+4. inputs/
+
+5. outputs/
+```
+
+---
+
+## Preferred Resolution Strategy
+
+Resolve files using:
+
+```text
+Filename Pattern
+
++
+
+Document Metadata
+
++
+
+Purpose Validation
+```
+
+rather than filename matching alone.
+
+---
+
+## Approved Search Patterns
+
+### Standards
+
+```text
+REPORT_DESIGN_STANDARDS_v*.md
+```
+
+---
+
+### Guidelines
+
+```text
+DECISION_STORY_GUIDELINES_v*.md
+```
+
+---
+
+### Templates
+
+```text
+01_REPORT_STORY_MATRIX_TEMPLATE_v*.md
+
+02_REPORT_STORY_TEMPLATE_v*.md
+```
+
+---
+
+### Inputs
+
+```text
+INPUT_BRD_*.md
+```
+
+---
+
+## Purpose Validation
+
+After locating a candidate file verify the purpose before use.
+
+Example:
+
+```text
+REPORT_DESIGN_STANDARDS
+```
+
+must contain:
+
+```text
+Decision Design
+
+Question Design
+
+Signal Design
+
+Threshold Design
+
+Action Design
+
+Story Design
+```
+
+---
+
+```text
+DECISION_STORY_GUIDELINES
+```
+
+must contain:
+
+```text
+Decision Discovery
+
+Question Discovery
+
+Signal Discovery
+
+Story Design
+```
+
+---
+
+If validation fails:
+
+```text
+Continue Searching
+```
+
+until a valid artifact is found.
+
+---
+
+# Version Resolution Rules
+
+When multiple matching files exist:
+
+Do not automatically choose the highest version.
+
+---
+
+## Resolution Order
+
+Use:
+
+```text
+1. Approved
+
+2. Production Ready
+
+3. Frozen
+
+4. Highest Approved Version
+```
+
+---
+
+## Ignore
+
+Ignore:
+
+```text
+Draft
+
+Work In Progress
+
+Experimental
+
+Deprecated
+
+Archived
+```
+
+unless explicitly requested.
+
+---
+
+## Example
+
+Available:
+
+```text
+REPORT_DESIGN_STANDARDS_v1.0
+
+REPORT_DESIGN_STANDARDS_v2.0_DRAFT
+
+REPORT_DESIGN_STANDARDS_v1.1
+```
+
+Select:
+
+```text
+REPORT_DESIGN_STANDARDS_v1.1
+```
+
+because it is the highest approved version.
+
+Do not select:
+
+```text
+REPORT_DESIGN_STANDARDS_v2.0_DRAFT
+```
+
+simply because the version number is larger.
+
+---
+
+# Mandatory Read Order
+
+Before generating outputs the Decision Story Agent must read artifacts in the following order:
+
+```text
+1. REPORT_DESIGN_STANDARDS
+
+↓
+
+2. DECISION_STORY_GUIDELINES
+
+↓
+
+3. INPUT_BRD
+
+↓
+
+4. REPORT_STORY_MATRIX_TEMPLATE
+
+↓
+
+5. REPORT_STORY_TEMPLATE
+
+↓
+
+6. Generate REPORT_STORY_MATRIX
+
+↓
+
+7. Generate REPORT_STORY
+```
+
+---
+
+## Execution Rule
+
+Do not generate:
+
+```text
+REPORT_STORY_MATRIX
+
+REPORT_STORY
+```
+
+until all required framework artifacts have been reviewed.
+
+---
+
+## Governance Rule
+
+If any required artifact is unavailable:
+
+```text
+STOP EXECUTION
+```
+
+and report missing dependencies.
+
+Do not infer missing framework standards.
+
+---
+
+# Template Resolution Rules
+
+Templates must be resolved dynamically.
+
+---
+
+## Matrix Template
+
+Search:
+
+```text
+01_REPORT_STORY_MATRIX_TEMPLATE_v*.md
+```
+
+Use:
+
+```text
+Highest Approved Version
+```
+
+---
+
+## DSC Template
+
+Search:
+
+```text
+02_REPORT_STORY_TEMPLATE_v*.md
+```
+
+Use:
+
+```text
+Highest Approved Version
+```
+
+---
+
+## Template Governance
+
+Agents may:
+
+```text
+Populate Template Content
+```
+
+Agents may not:
+
+```text
+Remove Sections
+
+Rename Sections
+
+Reorder Sections
+
+Skip Required Sections
+```
+
+unless a newer approved template version explicitly permits the change.
+
+---
+
+## Template Validation
+
+Before generating outputs verify:
+
+```text
+Template Located
+
+Template Approved
+
+Template Version Identified
+
+Template Structure Preserved
+```
+---
 # Approved Templates
 
 The Decision Story Agent must populate approved templates.
@@ -337,7 +655,7 @@ Existing Reports
 Existing Dashboards
 
 Business Process Documentation
-
+*
 Operational Procedures
 
 Current-State Reporting
@@ -444,7 +762,7 @@ Success Criteria
 Apply:
 
 ```text
-REPORT_DESIGN_STANDARDS_v*.md
+REPORT_DESIGN_STANDARDS_v1.0
 ```
 
 to validate:
@@ -470,7 +788,7 @@ Story Design
 Apply:
 
 ```text
-DECISION_STORY_GUIDELINES_v*.md
+DECISION_STORY_GUIDELINES_v1.0
 ```
 
 to guide:
@@ -500,7 +818,7 @@ Visual Recommendations
 Populate:
 
 ```text
-01_REPORT_STORY_MATRIX_TEMPLATE_v*.md
+01_REPORT_STORY_MATRIX_TEMPLATE_v1.0
 ```
 
 Generate:
@@ -522,7 +840,7 @@ Decision Validation
 Populate:
 
 ```text
-02_REPORT_STORY_TEMPLATE_v*.md
+02_REPORT_STORY_TEMPLATE_v1.0
 ```
 
 Generate:
@@ -620,7 +938,8 @@ The Decision Story Agent concludes after:
 ```text
 REPORT_STORY
 ```
-```
+
+is generated.
 
 ---
 
