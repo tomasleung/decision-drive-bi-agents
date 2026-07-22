@@ -1,4 +1,5 @@
 # Standards
+
 ## Decision Story Agent
 
 ---
@@ -9,29 +10,20 @@ This folder contains the governing standards used by the Decision Story Agent.
 
 Standards define:
 
-```text
-What Good Looks Like
-
-Required Design Rules
-
-Required Validation Rules
-
-Required Governance Rules
-```
+- What Good Looks Like
+- Required Design Principles
+- Required Validation Rules
+- Required Traceability Rules
+- Required Decision-Driven Design Rules
 
 The standards ensure all Decision Story artifacts are:
 
-```text
-Consistent
-
-Deterministic
-
-Governed
-
-Repeatable
-
-Decision Driven
-```
+- Consistent
+- Deterministic
+- Governed
+- Repeatable
+- Traceable
+- Decision Driven
 
 across all projects.
 
@@ -41,74 +33,65 @@ across all projects.
 
 The Decision Story Agent transforms:
 
-```text
 Business Requirements
-
 ↓
-
 Decision Design
-
 ↓
-
 Story Design
-```
+↓
+Decision Story Contract
 
 Without standards, reports become:
 
-```text
+Data Driven
+↓
 Visual Driven
-
+↓
 Dashboard Driven
-
+↓
 Technology Driven
-```
 
 instead of:
 
-```text
 Decision Driven
-
+↓
 Question Driven
-
+↓
 Action Driven
-```
 
 ---
 
 # Current Standards
 
-## REPORT_DESIGN_STANDARDS_v1.0
+## REPORT_DESIGN_STANDARDS_v2.0
 
 Purpose:
 
-```text
-Provide the official Decision-Driven BI
-report design methodology.
-```
+Provide the official Decision-Driven BI report design methodology.
 
-This standard defines:
+The standard defines:
 
-```text
-Decision Design
+- Report Design Philosophy
+- Decision-First Design
+- Business Question Design
+- Signal Design
+- Threshold Design
+- Action Design
+- KPI Design
+- Story Design
+- Story Coverage Standards
+- Page Archetype Design
+- Layout Design
+- Visual Design
+- Traceability Design
+- Decision Readiness Design
+- Decision Story Contract Standards
 
-Business Question Design
+The standard defines:
 
-Signal Design
+What Good Looks Like
 
-Threshold Design
-
-Action Design
-
-Story Design
-
-Page Archetypes
-
-Layout Standards
-
-Visual Standards
-
-Decision Story Contract Standards
-```
+for all Decision Story outputs.
 
 ---
 
@@ -118,23 +101,15 @@ Decision Story Contract Standards
 
 Defines:
 
-```text
-Decision Ownership
-
-Decision Frequency
-
-Primary Decisions
-
-Secondary Decisions
-
-Decision Success Criteria
-```
+- Primary Decisions
+- Secondary Decisions
+- Decision Ownership
+- Decision Frequency
+- Decision Success Criteria
 
 Answers:
 
-```text
 What decision requires support?
-```
 
 ---
 
@@ -142,20 +117,14 @@ What decision requires support?
 
 Defines:
 
-```text
-Question Structure
-
-Question Prioritization
-
-Question Validation
-```
+- Question Structure
+- Question Relevance
+- Question Validation
+- Question Actionability
 
 Answers:
 
-```text
-What must users know
-before making a decision?
-```
+What information is required before making a decision?
 
 ---
 
@@ -163,19 +132,14 @@ before making a decision?
 
 Defines:
 
-```text
-Signal Identification
-
-Signal Qualification
-
-Signal Alignment
-```
+- Signal Identification
+- Signal Qualification
+- Signal Alignment
+- Signal Actionability
 
 Answers:
 
-```text
 What should users monitor?
-```
 
 ---
 
@@ -183,21 +147,15 @@ What should users monitor?
 
 Defines:
 
-```text
-Healthy States
-
-Warning States
-
-Critical States
-
-Action Triggers
-```
+- Healthy States
+- Warning States
+- Critical States
+- Business Meaning
+- Action Triggers
 
 Answers:
 
-```text
 When should users react?
-```
 
 ---
 
@@ -205,19 +163,29 @@ When should users react?
 
 Defines:
 
-```text
-Business Actions
-
-Recommended Actions
-
-Governance Actions
-```
+- Business Actions
+- Recommended Actions
+- Responsible Roles
+- Expected Outcomes
 
 Answers:
 
-```text
 What should users do next?
-```
+
+---
+
+## KPI Design
+
+Defines:
+
+- KPI Qualification
+- KPI Purpose
+- KPI Governance
+- KPI Alignment
+
+Answers:
+
+Which KPIs support decisions?
 
 ---
 
@@ -225,85 +193,172 @@ What should users do next?
 
 Defines:
 
-```text
-Narrative Flow
-
-Story Structure
-
-Decision Flow
-
-Audience Alignment
-```
+- Narrative Flow
+- Decision Flow
+- Audience Alignment
+- Story Purpose
 
 Answers:
 
-```text
 What story should the report tell?
-```
 
 ---
 
-## Layout Standards
+## Story Coverage Standard
 
 Defines:
 
-```text
-Information Hierarchy
-
-Page Archetypes
-
-Section Ordering
-
-Reading Flow
-```
+- Executive Context
+- Action Required
+- Decision Readiness
+- Decision Prioritization
+- Analysis
+- Data Trust
+- Regional Monitoring
+- Operational Briefing
 
 Answers:
 
-```text
+Does the report provide complete decision coverage?
+
+---
+
+## Page Archetype Design
+
+Defines:
+
+- Operational Command Centres
+- Capacity Intelligence
+- Executive Monitoring
+- Exception Management
+- Regional Monitoring
+- Performance Monitoring
+- Data Quality Investigation
+
+Answers:
+
+What report pattern best supports the decision?
+
+---
+
+## Layout Design
+
+Defines:
+
+- Reading Order
+- Information Hierarchy
+- Section Sequencing
+- Decision Navigation
+
+Answers:
+
 How should users consume information?
-```
 
 ---
 
-## Visual Standards
+## Visual Design
 
 Defines:
 
-```text
-Visual Selection
-
-Visual Purpose
-
-Visual Governance
-
-Visual Consistency
-```
+- Visual Selection
+- Visual Purpose
+- Visual Governance
+- Visual Consistency
 
 Answers:
 
-```text
 How should information be presented?
-```
 
 ---
 
-# Usage
+## Traceability Design
 
-The Decision Story Agent must apply:
+Defines:
 
-```text
-REPORT_DESIGN_STANDARDS_v1.0
-```
+- Decision Traceability
+- Question Traceability
+- Signal Traceability
+- Threshold Traceability
+- Action Traceability
+- Story Traceability
+- Visual Traceability
 
-before generating:
+Answers:
 
-```text
-REPORT_STORY_MATRIX
+Can every report element be traced back to a business decision?
 
-REPORT_STORY
-```
+---
 
-The standards must be applied before templates are populated.
+## Decision Readiness Design
+
+Defines:
+
+- Decision Preconditions
+- Required Inputs
+- Business Readiness
+- Design Readiness
+
+Answers:
+
+Is there sufficient business context to begin report design?
+
+---
+
+# Relationship To Other Framework Layers
+
+The Decision Story Framework follows:
+
+Input Contract
+↓
+Standards
+↓
+Guidelines
+↓
+Templates
+↓
+Agent
+↓
+Governance
+
+---
+
+## Standards
+
+Define:
+
+What Good Looks Like
+
+---
+
+## Guidelines
+
+Define:
+
+How To Apply Standards
+
+---
+
+## Templates
+
+Define:
+
+What Must Be Produced
+
+---
+
+## Agent
+
+Defines:
+
+How Framework Artifacts Are Executed
+
+---
+
+## Governance
+
+Defines:
+
+How Outputs Are Evaluated
 
 ---
 
@@ -311,113 +366,73 @@ The standards must be applied before templates are populated.
 
 Standards define:
 
-```text
-Behavior
-
-Logic
-
-Governance
-
-Validation Rules
-```
+- Design Principles
+- Validation Rules
+- Traceability Rules
+- Governance Expectations
 
 Templates define:
 
-```text
-Structure
-
-Sections
-
-Formatting
-
-Output Layout
-```
+- Structure
+- Sections
+- Formatting
+- Output Layout
 
 Relationship:
 
-```text
 Standards
-
 ↓
-
 Templates
-
 ↓
-
 Artifacts
-```
+
+Templates must never override standards.
 
 ---
 
-# Design Chain
+# Decision Design Chain
 
 All report design activities must follow:
 
-```text
 Decision
-
 ↓
-
 Business Question
-
 ↓
-
 Signal
-
 ↓
-
 Threshold
-
 ↓
-
 Action
-
 ↓
-
 Story
-
 ↓
-
-Layout
-
-↓
-
 Visual
-```
 
 This sequence may not be reversed.
 
 Never start with:
 
-```text
 Visual
-
 ↓
-
 Layout
-
 ↓
-
-Story
-
+Dashboard
 ↓
-
 Decision
-```
 
 ---
 
-# Rule
+# Governing Rule
 
 The Standards folder is the:
 
-```text
 Source Of Truth
-```
 
 for Decision Story design.
 
 Agent logic must never override standards.
+
+Guidelines must never override standards.
 
 Templates must never override standards.
 
@@ -425,9 +440,22 @@ Examples must never override standards.
 
 When conflicts exist:
 
-```text
 Standards Win
-```
+
+---
+
+# Usage
+
+The Decision Story Agent must apply:
+
+REPORT_DESIGN_STANDARDS_v2.0
+
+before generating:
+
+- REPORT_STORY_MATRIX
+- REPORT_STORY
+
+The standards must be applied before template population begins.
 
 ---
 
@@ -435,23 +463,27 @@ Standards Win
 
 Before approving Decision Story outputs verify:
 
-```text
-□ Decisions Identified
+□ Primary Decision Defined
 
-□ Questions Identified
+□ Secondary Decisions Defined
 
-□ Signals Identified
+□ Business Questions Defined
 
-□ Thresholds Identified
+□ Signals Defined
 
-□ Actions Identified
+□ Thresholds Defined
 
-□ Story Flow Validated
+□ Actions Defined
+
+□ Story Coverage Complete
+
+□ Decision Traceability Preserved
+
+□ Layout Validated
 
 □ Visual Recommendations Validated
 
-□ Decision Traceability Preserved
-```
+□ User Action Supported
 
 ---
 
@@ -459,25 +491,24 @@ Before approving Decision Story outputs verify:
 
 The Standards folder succeeds when:
 
-```text
 Every Decision Story
 
 follows the same rules,
 
 uses the same methodology,
 
-and preserves the same
-decision-driven philosophy.
-```
+preserves the same decision-driven philosophy,
+
+maintains full traceability,
+
+and supports business action.
 
 The result is:
 
-```text
-Consistent
+- Consistent
+- Governed
+- Repeatable
+- Traceable
+- Decision-Driven Report Design
 
-Governed
-
-Repeatable
-
-Decision-Driven Report Design
-```
+across all future implementations.

@@ -1,353 +1,219 @@
 # Inputs
-## Decision Story Agent
 
----
+## Purpose
 
-# Purpose
+The Inputs folder contains the approved Business Requirements Document (BRD) artifacts used by the Decision Story Agent.
 
-This folder contains the inputs used by the Decision Story Agent.
+The purpose of the Input layer is to provide a consistent and governed business input contract before Decision Story generation begins.
 
-Inputs provide the business context, objectives, decisions, and success criteria required to create Decision Story artifacts.
+The quality of:
 
-The Decision Story Agent transforms:
+- REPORT_STORY_MATRIX
+- REPORT_STORY (DSC)
 
-```text
+depends directly on the quality of the BRD provided.
+
+The framework follows:
+
 Business Requirements
-
 ↓
-
-Decision Design
-
+Decision Discovery
 ↓
-
+Question Discovery
+↓
+Signal Discovery
+↓
+Action Discovery
+↓
 Story Design
-```
-
-using the approved inputs contained within this folder.
-
----
-
-# Input Classification
-
-The Decision Story Agent is the first agent in the framework.
-
-Because it is the starting point of the pipeline, its primary input originates from the business rather than another agent.
-
-Inputs are divided into:
-
-```text
-Required Inputs
-
-Reference Inputs
-```
-
----
-
-# Required Inputs
-
-## Business Requirements Document (BRD)
-
-Purpose:
-
-```text
-Capture Business Intent
-```
-
-Provides:
-
-```text
-Business Problem
-
-Business Goals
-
-Success Criteria
-
-Business Decisions
-
-Business Questions
-
-Stakeholders
-
-Constraints
-```
-
-Role:
-
-```text
-Authoritative Business Input
-```
-
----
-
-# Recommended BRD Content
-
-A quality BRD should contain:
-
-```text
-Business Context
-
-Current State
-
-Desired State
-
-Pain Points
-
-Business Goals
-
-Business Decisions
-
-Success Metrics
-
-Stakeholders
-
-Constraints
-
-Assumptions
-```
-
----
-
-# Reference Inputs
-
-## Existing Reports (Optional)
-
-Purpose:
-
-```text
-Provide Current-State Context
-```
-
-Provides:
-
-```text
-Existing Metrics
-
-Existing Visuals
-
-Current User Experience
-
-Known Pain Points
-```
-
-Role:
-
-```text
-Reference Only
-```
-
----
-
-## Existing Dashboards (Optional)
-
-Purpose:
-
-```text
-Understand Existing Reporting
-```
-
-Provides:
-
-```text
-Current KPI Usage
-
-Current User Workflow
-
-Existing Report Structure
-```
-
-Role:
-
-```text
-Reference Only
-```
-
----
-
-## Business Process Documentation (Optional)
-
-Purpose:
-
-```text
-Understand Operational Workflows
-```
-
-Provides:
-
-```text
-Business Activities
-
-Operational Processes
-
-Decision Timing
-
-Action Triggers
-```
-
-Role:
-
-```text
-Reference Only
-```
-
----
-
-# Input Priority
-
-When conflicts exist:
-
-```text
-1. BRD
-
-2. Business Stakeholder Direction
-
-3. Existing Process Documentation
-
-4. Existing Reports
-
-5. Existing Dashboards
-```
-
-The approved BRD remains the governing document.
-
----
-
-# Folder Structure
-
-```text
-inputs/
-
-README.md
-
-required/
-
-└── BRD_vX.X.md
-
-reference/
-
-├── Existing_Report.pdf
-├── Existing_Dashboard.pbix
-├── Process_Documentation.docx
-└── Supporting_Material
-```
-
----
-
-# Input Responsibilities
-
-Inputs define:
-
-```text
-Business Intent
-
-Business Decisions
-
-Business Goals
-
-Business Problems
-
-Business Questions
-
-Success Criteria
-```
-
-Inputs do not define:
-
-```text
-Story Design
-
-Narrative Design
-
-Layout Design
-
-Visual Recommendations
-
-Decision Story Structure
-```
-
-Those artifacts are created by the Decision Story Agent.
-
----
-
-# Relationship To Outputs
-
-```text
-BRD
-
 ↓
+Decision Story Generation
 
-Decision Story Agent
+Poor input quality leads to poor output quality.
 
-↓
+The Input layer exists to reduce business rediscovery and improve consistency across Decision Story outputs.
+
+---
+
+# Input Contract
+
+## Approved Template
+
+INPUT_BRD_TEMPLATE_v1.0.md
+
+Purpose:
+
+Defines the required structure for all Business Requirements Documents consumed by the Decision Story Agent.
+
+The template establishes a standard input contract and ensures the BRD contains sufficient information to generate:
+
+- REPORT_STORY_MATRIX
+- REPORT_STORY
+
+without significant business rediscovery.
+
+---
+
+# Gold Input Example
+
+## Approved Example
+
+INPUT_BRD_AnimalFlow_LiveCapacity_v3.0.md
+
+Purpose:
+
+Provides a reference implementation of the approved input contract.
+
+This example demonstrates the expected level of:
+
+- Business Context
+- Decision Modeling
+- Business Questions
+- Signal Design
+- KPI Definition
+- Action Design
+- Data Sources
+- Success Criteria
+- Governance Readiness
+
+The example should be used as a quality reference when creating future BRDs.
+
+The example does not define framework requirements.
+
+The template remains the authoritative input contract.
+
+---
+
+# Required BRD Sections
+
+All BRDs should contain:
+
+01 Business Summary
+
+02 Business Problem
+
+03 Decision Model
+
+03A Decision Success Criteria
+
+04 Current State (As-Is)
+
+05 Future State (To-Be)
+
+06 Business Questions
+
+07 Required Information (Signals)
+
+08 KPI Contracts
+
+09 Data Sources
+
+09A Action Model
+
+10 Scope
+
+11 Assumptions
+
+12 Constraints
+
+13 Success Criteria
+
+14 Data Validation Requirements
+
+15 Acceptance Criteria
+
+16 Stakeholders
+
+17 Decision Story Readiness Check
+
+---
+
+# Input Validation
+
+Before execution the Decision Story Agent should verify:
+
+✅ Primary Decision Defined
+
+✅ Secondary Decisions Defined
+
+✅ Business Questions Defined
+
+✅ Signals Defined
+
+✅ KPI Contracts Defined
+
+✅ Action Model Defined
+
+✅ Data Sources Defined
+
+✅ Success Criteria Defined
+
+✅ Validation Requirements Defined
+
+✅ Stakeholders Defined
+
+If critical sections are missing:
+
+STOP EXECUTION
+
+and return a BRD readiness assessment.
+
+---
+
+# Readiness Scoring
+
+90 - 100
+
+Ready For Decision Story Agent
+
+70 - 89
+
+Ready With Assumptions
+
+Below 70
+
+Return To BRD Author
+
+---
+
+# Relationship To Decision Story Agent
+
+The Decision Story Agent consumes:
+
+INPUT_BRD_TEMPLATE_v1.0 compliant BRDs
+
+and produces:
 
 REPORT_STORY_MATRIX
-
 ↓
-
 REPORT_STORY (DSC)
-```
 
-The inputs explain:
-
-```text
-What the business needs
-```
-
-The outputs explain:
-
-```text
-How decisions will be supported
-```
+The Input layer therefore serves as the governing business contract for all downstream Decision Story activities.
 
 ---
 
-# Input Validation Checklist
+# Input Success Statement
 
-Before executing the Decision Story Agent verify:
+A BRD succeeds when:
 
-```text
-□ BRD Available
+Every Business Goal
+supports a Decision
 
-□ Business Goals Defined
+Every Decision
+supports a Business Question
 
-□ Business Decisions Identified
+Every Business Question
+supports a Signal
 
-□ Stakeholders Identified
+Every Signal
+supports an Action or KPI
 
-□ Success Criteria Defined
+Every Action
+supports a Business Outcome
 
-□ Input Approved
+and the Decision Story Agent can generate:
 
-□ Scope Understood
-```
+- REPORT_STORY_MATRIX
+- REPORT_STORY
 
----
-
-# Success Statement
-
-The Inputs folder succeeds when:
-
-```text
-The Decision Story Agent
-
-can fully understand
-
-the business problem,
-
-the business decisions,
-
-and the desired outcomes
-```
-
-before story design begins.
-
-The result is:
-
-```text
-Decision-Driven
-
-Business-Aligned
-
-Traceable
-
-Story Design
-```
+without requiring significant business rediscovery.
