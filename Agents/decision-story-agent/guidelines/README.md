@@ -1,113 +1,134 @@
 # Guidelines
+
 ## Decision Story Agent
 
 ---
 
 # Purpose
 
-This folder contains implementation guidance used by the Decision Story Agent.
+This folder contains the implementation guidelines used by the Decision Story Agent.
 
-Guidelines explain:
+Guidelines define:
 
-```text
-How To Apply Standards
+- How To Apply Standards
+- How To Analyze Inputs
+- How To Discover Decisions
+- How To Discover Questions
+- How To Discover Signals
+- How To Discover Actions
+- How To Design Stories
+- How To Validate Outputs
 
-How To Use Templates
+The guidelines ensure Decision Story generation remains:
 
-How To Discover Decisions
+- Consistent
+- Repeatable
+- Traceable
+- Business Driven
+- Action Oriented
 
-How To Build Stories
-
-How To Validate Outputs
-```
-
-Unlike standards, guidelines provide practical execution guidance.
+across all projects.
 
 ---
 
 # Why Guidelines Exist
 
-Standards answer:
+Standards define:
 
-```text
-What Is Required?
-```
+What Good Looks Like
 
-Guidelines answer:
+Guidelines define:
 
-```text
-How Should It Be Applied?
-```
+How To Achieve It
 
-The Decision Story Agent transforms:
+Without guidelines, different analysts, developers, and AI models may interpret the same business requirements differently.
 
-```text
+Guidelines provide a repeatable methodology for transforming:
+
 Business Requirements
-
 ↓
-
-Decision Design
-
+Decision Framework
 ↓
-
-Story Design
-
+Story Framework
 ↓
-
 Decision Story Contract
-```
-
-Guidelines provide the recommended execution approach.
 
 ---
 
-# Current Guideline
+# Current Guidelines
 
-## DECISION_STORY_GUIDELINES_v1.0.md
+## DECISION_STORY_GUIDELINES_v2.0
 
 Purpose:
 
-```text
-Provide practical guidance
-for creating Decision Story artifacts
-within the Decision-Driven BI Framework.
-```
+Provide the official Decision Story discovery and design methodology.
+
+The guideline defines:
+
+- BRD Analysis
+- Decision Discovery
+- Question Discovery
+- Signal Discovery
+- Threshold Design
+- Action Discovery
+- Story Construction
+- Coverage Discovery
+- Traceability Validation
+- Handoff Rules
+
+The guideline defines:
+
+How To Apply Standards
+
+during execution.
 
 ---
 
 # Guideline Coverage
 
+## BRD Analysis
+
+Defines:
+
+- Business Goal Analysis
+- Problem Analysis
+- Current State Analysis
+- Future State Analysis
+- Stakeholder Analysis
+
+Answers:
+
+What is the business trying to achieve?
+
+---
+
 ## Decision Discovery
 
 Defines:
 
-```text
-Primary Decision Identification
+- Primary Decision Discovery
+- Secondary Decision Discovery
+- Decision Validation
+- Decision Prioritization
 
-Secondary Decision Identification
+Answers:
 
-Decision Ownership
-
-Decision Frequency
-
-Decision Success Criteria
-```
+What decisions should be supported?
 
 ---
 
-## Business Question Discovery
+## Question Discovery
 
 Defines:
 
-```text
-Question Discovery
+- Explicit Question Discovery
+- Implied Question Discovery
+- Coverage Analysis
+- Question Validation
 
-Question Prioritization
+Answers:
 
-Question Validation
-
-Question Categorization
-```
+What information is required before making a decision?
 
 ---
 
@@ -115,15 +136,14 @@ Question Categorization
 
 Defines:
 
-```text
-Signal Identification
+- Signal Identification
+- Signal Classification
+- Signal Prioritization
+- Signal Validation
 
-Signal Validation
+Answers:
 
-Signal Prioritization
-
-Signal Mapping
-```
+What evidence should support the decision?
 
 ---
 
@@ -131,145 +151,275 @@ Signal Mapping
 
 Defines:
 
-```text
-Healthy States
+- Threshold Discovery
+- Status Design
+- Business Meaning Design
+- Action Triggers
 
-Warning States
+Answers:
 
-Critical States
-
-Action Triggers
-```
-
----
-
-## Action Design
-
-Defines:
-
-```text
-Operational Actions
-
-Decision Actions
-
-Governance Actions
-```
+When should users react?
 
 ---
 
-## Story Design
+## Action Discovery
 
 Defines:
 
-```text
-Narrative Flow
+- Business Response Design
+- Operational Actions
+- Responsible Roles
+- Expected Outcomes
 
-Business Journey
+Answers:
 
-Decision Journey
-
-Story Sequencing
-```
+What should happen next?
 
 ---
 
-## Layout Blueprint Design
+## Story Construction
 
 Defines:
 
-```text
-Information Hierarchy
+- Story Purpose
+- Story Sequencing
+- Story Responsibilities
+- Story Validation
 
-Section Ordering
+Answers:
 
-Reading Flow
-```
+How should the decision journey be communicated?
 
 ---
 
-## Visual Recommendation Design
+## Coverage Discovery
 
 Defines:
 
-```text
-Visual Selection
+- Operational Coverage
+- Capacity Coverage
+- Risk Coverage
+- Governance Coverage
+- Data Quality Coverage
+- Regional Coverage
+- Executive Coverage
 
-Visual Justification
+Answers:
 
-Business Alignment
-```
+Has the business problem been fully covered?
+
+---
+
+## Traceability
+
+Defines:
+
+- Decision Traceability
+- Question Traceability
+- Signal Traceability
+- Action Traceability
+- Story Traceability
+
+Answers:
+
+Can every design artifact be traced back to a decision?
+
+---
+
+## Validation
+
+Defines:
+
+- Decision Validation
+- Question Validation
+- Signal Validation
+- Action Validation
+- Story Validation
+- Traceability Validation
+
+Answers:
+
+Is the design ready for promotion?
+
+---
+
+# Relationship To Other Framework Layers
+
+The Decision Story Framework follows:
+
+Input Contract
+↓
+Standards
+↓
+Guidelines
+↓
+Templates
+↓
+Agent
+↓
+Governance
+
+---
+
+## Inputs
+
+Define:
+
+What Information Is Required
+
+---
+
+## Standards
+
+Define:
+
+What Good Looks Like
+
+---
+
+## Guidelines
+
+Define:
+
+How To Apply Standards
+
+---
+
+## Templates
+
+Define:
+
+What Must Be Produced
+
+---
+
+## Agent
+
+Defines:
+
+How Framework Artifacts Are Executed
+
+---
+
+## Governance
+
+Defines:
+
+How Outputs Are Evaluated
 
 ---
 
 # Relationship To Standards
 
-```text
+Standards define:
+
+- Design Principles
+- Quality Expectations
+- Governance Expectations
+
+Guidelines define:
+
+- Discovery Methods
+- Design Methods
+- Validation Methods
+- Execution Methods
+
+Relationship:
+
 Standards
-
-Define Rules
-
 ↓
-
 Guidelines
-
-Explain Application
-```
-
----
-
-# Relationship To Templates
-
-```text
-Guidelines
-
 ↓
-
 Templates
-
 ↓
-
 Artifacts
-```
+
+Guidelines must never override standards.
 
 ---
 
-# Agent Dependency
+# Discovery Chain
 
-The Decision Story Agent should always consult:
+All design activities should follow:
 
-```text
-DECISION_STORY_GUIDELINES_v1.0.md
-```
+Business Problem
+↓
+Decision
+↓
+Question
+↓
+Signal
+↓
+Threshold
+↓
+Action
+↓
+Story
+↓
+Visual
 
-during:
+This sequence should remain traceable throughout the design process.
 
-```text
-REPORT_STORY_MATRIX Creation
+---
 
-REPORT_STORY Creation
-```
+# Governing Rule
+
+The Guidelines folder is the:
+
+Official Design Methodology
+
+for the Decision Story Agent.
+
+Agent logic should follow the guidelines.
+
+Templates should assume the guidelines have been applied.
+
+When conflicts exist:
+
+Standards Win
+
+Guidelines Direct Execution
+
+---
+
+# Usage
+
+The Decision Story Agent must apply:
+
+DECISION_STORY_GUIDELINES_v2.0
+
+after reviewing:
+
+REPORT_DESIGN_STANDARDS_v2.0
+
+and before populating:
+
+- REPORT_STORY_MATRIX
+- REPORT_STORY
 
 ---
 
 # Validation
 
-Before approving outputs verify:
+Before generating outputs verify:
 
-```text
+□ Business Problem Understood
+
 □ Primary Decision Defined
 
-□ Questions Defined
+□ Secondary Decisions Defined
 
-□ Signals Defined
+□ Question Coverage Complete
 
-□ Thresholds Defined
+□ Signal Coverage Complete
 
-□ Actions Defined
+□ Threshold Logic Defined
 
-□ Story Flow Defined
+□ Action Logic Defined
+
+□ Story Coverage Complete
 
 □ Traceability Preserved
-```
 
 ---
 
@@ -277,26 +427,23 @@ Before approving outputs verify:
 
 The Guidelines folder succeeds when:
 
-```text
-Decision Story Artifacts
+Every Decision Story
 
-are created consistently,
+follows the same discovery process,
 
-reviewed consistently,
+uses the same design methodology,
 
-and handed off consistently
-```
+maintains full traceability,
 
-across future projects.
+and consistently converts business requirements into decision-focused artifacts.
 
 The result is:
 
-```text
-Repeatable
+- Consistent
+- Governed
+- Repeatable
+- Traceable
+- Action-Oriented
+- Decision-Driven Design
 
-Governed
-
-Decision-Driven
-
-Story Design Practices
-```
+across all future implementations.
