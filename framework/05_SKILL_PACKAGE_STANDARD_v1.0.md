@@ -1,4 +1,4 @@
-# 04_SKILL_PACKAGE_STANDARD_v1.0
+# 05_SKILL_PACKAGE_STANDARD_v1.0.md
 
 ## Decision-Driven BI Agent Platform
 
