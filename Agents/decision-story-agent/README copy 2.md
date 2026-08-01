@@ -2,7 +2,7 @@
 
 ## Decision-Driven BI Agent Platform
 
-Version: 1.2
+Version: 1.1
 
 Status: Approved
 
@@ -20,7 +20,7 @@ This README explains:
 - How to navigate the repository
 - Recommended read order
 - How the agent fits into the platform lifecycle
-- How execution outputs are managed
+- How outputs are generated and promoted
 
 ---
 
@@ -96,6 +96,8 @@ decision-story-agent/
 ├── contracts/
 │
 ├── governance/
+│
+├── outputs/
 │
 ├── test-run/
 │
@@ -187,7 +189,7 @@ What lifecycle stages exist?
 
 What validations exist?
 
-What outputs are produced?
+How does promotion occur?
 ```
 
 ---
@@ -203,7 +205,7 @@ Answers:
 ```text
 What should the AI execute?
 
-How should execution occur?
+What actions occur at runtime?
 ```
 
 ---
@@ -222,62 +224,12 @@ INPUT_BRD_TEMPLATE
 INPUT_BRD_*
 ```
 
-Purpose:
+Answers:
 
 ```text
-Define what a valid BRD looks like.
+What information is required?
 
-Provide the business context to be analyzed.
-```
-
----
-
-### INPUT_BRD_TEMPLATE
-
-Role:
-
-```text
-Input Contract
-```
-
-Defines:
-
-```text
-Required Structure
-
-Required Sections
-
-Readiness Requirements
-
-Promotion Criteria
-```
-
----
-
-### INPUT_BRD_*
-
-Role:
-
-```text
-Input Payload
-```
-
-Provides:
-
-```text
-Business Context
-
-Business Problems
-
-Business Outcomes
-
-Decisions
-
-Questions
-
-Signals
-
-Actions
+What business problem should be solved?
 ```
 
 ---
@@ -315,9 +267,9 @@ Answers:
 ```text
 How should standards be applied?
 
-How should discovery occur?
+How should decisions be discovered?
 
-How should stories be developed?
+How should stories be designed?
 ```
 
 Examples:
@@ -337,9 +289,9 @@ Output Contracts
 Answers:
 
 ```text
-What outputs must be produced?
-
 How should outputs be structured?
+
+Which sections are required?
 ```
 
 Examples:
@@ -352,66 +304,20 @@ Examples:
 
 ---
 
-### REPORT_STORY_MATRIX_TEMPLATE
-
-Role:
-
-```text
-Output Contract
-```
-
-Defines:
-
-```text
-Required Matrix Structure
-
-Required Decision Coverage
-
-Required Signal Coverage
-
-Required Story Coverage
-```
-
----
-
-### REPORT_STORY_TEMPLATE
-
-Role:
-
-```text
-Output Contract
-```
-
-Defines:
-
-```text
-Required DSC Structure
-
-Required Narrative Coverage
-
-Required Traceability Coverage
-
-Required Story Coverage
-```
-
----
-
 ## governance/
 
 Purpose:
 
-Generation Quality Governance
+Quality Governance
 
 Answers:
 
 ```text
 What Good Looks Like?
 
-How is quality evaluated?
+How are outputs reviewed?
 
-What must be reviewed?
-
-What conditions cause failure?
+How are outputs scored?
 ```
 
 Examples:
@@ -424,34 +330,6 @@ DECISION_STORY_REVIEW_CRITERIA
 DECISION_STORY_SCORING_MODEL
 ```
 
-Governance is required during generation.
-
-Governance is not limited to review activities.
-
-Governance defines quality expectations before outputs are generated.
-
----
-
-## contracts/
-
-Purpose:
-
-Future Contract Definitions
-
-Examples:
-
-```text
-Input Contracts
-
-Output Contracts
-
-Inter-Agent Contracts
-
-Handoff Contracts
-```
-
-This folder may remain empty until contract artifacts are introduced.
-
 ---
 
 ## test-run/
@@ -463,14 +341,16 @@ Execution Workspace
 Answers:
 
 ```text
-Where are outputs generated?
+Where are generated outputs stored?
 
-How are runs isolated?
+How are test runs isolated?
 
-How are validation cycles tracked?
+How are validation runs tracked?
+
+How are outputs reviewed?
 ```
 
-Every execution should create a new test run folder.
+Each execution should create a dedicated test run folder.
 
 Example:
 
@@ -488,7 +368,7 @@ REPORT_STORY_MATRIX
 REPORT_STORY
 ```
 
-Optional Contents:
+Additional artifacts may include:
 
 ```text
 Execution Notes
@@ -498,13 +378,41 @@ Validation Findings
 Review Notes
 ```
 
-Execution runs must not overwrite previous runs.
+Test runs should never overwrite previous executions.
+
+---
+
+## outputs/
+
+Purpose:
+
+Promoted Deliverables
+
+Answers:
+
+```text
+Which outputs have been reviewed?
+
+Which outputs have been approved?
+
+Which outputs are available for downstream agents?
+```
+
+Expected Contents:
+
+```text
+REPORT_STORY_MATRIX
+
+REPORT_STORY
+```
+
+Outputs should only be placed here after review and approval.
 
 ---
 
 # Agent Lifecycle Position
 
-The Decision Story Agent is the first operational agent within the platform.
+The Decision Story Agent is the first operational platform agent.
 
 Platform Flow:
 
@@ -535,28 +443,28 @@ Report Build Agent
 Primary Inputs:
 
 ```text
-INPUT_BRD_TEMPLATE
-
 INPUT_BRD
 ```
 
 Supporting Inputs:
 
 ```text
-Standards
+INPUT_BRD_TEMPLATE
 
-Guidelines
+Platform Standards
 
-Governance
+Platform Guidelines
 
-Templates
+Governance Artifacts
+
+Output Templates
 ```
 
 ---
 
 # Outputs
 
-Generated Outputs:
+Primary Outputs:
 
 ```text
 REPORT_STORY_MATRIX
@@ -564,45 +472,29 @@ REPORT_STORY_MATRIX
 REPORT_STORY
 ```
 
-Generated outputs are created inside:
-
-```text
-test-run/
-```
-
-during execution.
+The outputs become governing business design artifacts used by downstream agents.
 
 ---
 
-# Execution Model
+# Output Promotion Model
 
-Execution follows:
+Generated outputs follow:
 
 ```text
-Validate Input Contract
+Generate
 ↓
-Validate Input Payload
+test-run/
 ↓
-Load Governance
+Review
 ↓
-Load Standards
+Approval
 ↓
-Load Guidelines
-↓
-Load Templates
-↓
-Execute Blueprint
-↓
-Generate REPORT_STORY_MATRIX
-↓
-Validate
-↓
-Generate REPORT_STORY
-↓
-Validate
-↓
-Store In Test Run
+outputs/
 ```
+
+Outputs remain working artifacts until promotion.
+
+Downstream agents should consume promoted artifacts whenever possible.
 
 ---
 
@@ -710,7 +602,7 @@ Action
 Story
 ```
 
-The Decision Story Agent is responsible for establishing and preserving the traceability chain.
+The agent is the first platform component responsible for establishing and preserving the traceability chain.
 
 ---
 
@@ -738,13 +630,13 @@ AGENT_README.md
 SKILL_BLUEPRINT.md
 ```
 
-Execution begins after:
+Execution begins only after:
 
 ```text
 02_AGENT_STARTUP_SOP
 ```
 
-has completed successfully.
+is complete.
 
 ---
 
@@ -790,11 +682,4 @@ Read:
 AGENT_README.md
 ```
 
-to understand:
-
-- Agent Responsibilities
-- Inputs
-- Outputs
-- Lifecycle Ownership
-- Governance Model
-- Operating Model
+to understand the Decision Story Agent's responsibilities, inputs, outputs, lifecycle ownership, governance model, and operating model in detail.

@@ -12,8 +12,10 @@ Standards define:
 
 - What Good Looks Like
 - Required Design Principles
+- Required Discovery Principles
 - Required Validation Rules
 - Required Traceability Rules
+- Required Governance Rules
 - Required Decision-Driven Design Rules
 
 The standards ensure all Decision Story artifacts are:
@@ -24,6 +26,9 @@ The standards ensure all Decision Story artifacts are:
 - Repeatable
 - Traceable
 - Decision Driven
+- Outcome Oriented
+- Human Governed
+- Promotion Ready
 
 across all projects.
 
@@ -31,18 +36,27 @@ across all projects.
 
 # Why Standards Exist
 
-The Decision Story Agent transforms:
+The Decision Story Framework transforms:
 
-Business Requirements
+```text
+Business Problem
+↓
+Business Capability
+↓
+Business Outcome
 ↓
 Decision Design
 ↓
 Story Design
 ↓
 Decision Story Contract
+```
+
+into a governed business design.
 
 Without standards, reports become:
 
+```text
 Data Driven
 ↓
 Visual Driven
@@ -50,20 +64,25 @@ Visual Driven
 Dashboard Driven
 ↓
 Technology Driven
+```
 
 instead of:
 
+```text
+Business Outcome Driven
+↓
 Decision Driven
 ↓
 Question Driven
 ↓
 Action Driven
+```
 
 ---
 
 # Current Standards
 
-## REPORT_DESIGN_STANDARDS_v2.0
+## REPORT_DESIGN_STANDARDS_v2.1
 
 Purpose:
 
@@ -72,6 +91,7 @@ Provide the official Decision-Driven BI report design methodology.
 The standard defines:
 
 - Report Design Philosophy
+- Foundation Review
 - Decision-First Design
 - Business Question Design
 - Signal Design
@@ -85,11 +105,18 @@ The standard defines:
 - Visual Design
 - Traceability Design
 - Decision Readiness Design
+- Business Outcome Design
+- Human Authority Design
+- Failure Mode Design
+- Handoff Readiness Design
+- Regression Protection Design
 - Decision Story Contract Standards
 
 The standard defines:
 
+```text
 What Good Looks Like
+```
 
 for all Decision Story outputs.
 
@@ -97,11 +124,37 @@ for all Decision Story outputs.
 
 # Standards Coverage
 
+## Foundation Review Design
+
+Defines:
+
+- Business Problem
+- Business Capability
+- Strategic Alignment
+- Business Outcomes
+- Assumptions
+- Constraints
+- Risks
+
+Answers:
+
+```text
+Why does this report exist?
+```
+
+and
+
+```text
+What business capability is being improved?
+```
+
+---
+
 ## Decision Design
 
 Defines:
 
-- Primary Decisions
+- Primary Decision
 - Secondary Decisions
 - Decision Ownership
 - Decision Frequency
@@ -109,7 +162,9 @@ Defines:
 
 Answers:
 
+```text
 What decision requires support?
+```
 
 ---
 
@@ -124,7 +179,9 @@ Defines:
 
 Answers:
 
+```text
 What information is required before making a decision?
+```
 
 ---
 
@@ -139,7 +196,9 @@ Defines:
 
 Answers:
 
+```text
 What should users monitor?
+```
 
 ---
 
@@ -155,7 +214,9 @@ Defines:
 
 Answers:
 
+```text
 When should users react?
+```
 
 ---
 
@@ -170,7 +231,9 @@ Defines:
 
 Answers:
 
+```text
 What should users do next?
+```
 
 ---
 
@@ -185,7 +248,9 @@ Defines:
 
 Answers:
 
+```text
 Which KPIs support decisions?
+```
 
 ---
 
@@ -200,7 +265,9 @@ Defines:
 
 Answers:
 
+```text
 What story should the report tell?
+```
 
 ---
 
@@ -219,7 +286,9 @@ Defines:
 
 Answers:
 
+```text
 Does the report provide complete decision coverage?
+```
 
 ---
 
@@ -237,7 +306,9 @@ Defines:
 
 Answers:
 
+```text
 What report pattern best supports the decision?
+```
 
 ---
 
@@ -252,7 +323,9 @@ Defines:
 
 Answers:
 
+```text
 How should users consume information?
+```
 
 ---
 
@@ -267,7 +340,9 @@ Defines:
 
 Answers:
 
+```text
 How should information be presented?
+```
 
 ---
 
@@ -275,6 +350,7 @@ How should information be presented?
 
 Defines:
 
+- Outcome Traceability
 - Decision Traceability
 - Question Traceability
 - Signal Traceability
@@ -285,7 +361,99 @@ Defines:
 
 Answers:
 
-Can every report element be traced back to a business decision?
+```text
+Can every report element be traced back to a business outcome and decision?
+```
+
+---
+
+## Business Outcome Design
+
+Defines:
+
+- Desired Outcomes
+- Measurable Outcomes
+- Operational Outcomes
+- Strategic Outcomes
+- Outcome Ownership
+
+Answers:
+
+```text
+What business result should improve?
+```
+
+---
+
+## Human Authority Design
+
+Defines:
+
+- Decision Ownership
+- Business Accountability
+- Approval Authority
+- Human Review Requirements
+- AI Boundaries
+
+Answers:
+
+```text
+Who is ultimately accountable for the decision?
+```
+
+---
+
+## Failure Mode Design
+
+Defines:
+
+- Decision Failure Scenarios
+- Signal Failure Scenarios
+- Data Failure Scenarios
+- Process Failure Scenarios
+- Mitigation Strategies
+
+Answers:
+
+```text
+What could go wrong and how will it be managed?
+```
+
+---
+
+## Handoff Readiness Design
+
+Defines:
+
+- Mockup Readiness
+- TRD Readiness
+- Semantic Readiness
+- Build Readiness
+- Promotion Readiness
+
+Answers:
+
+```text
+Can downstream agents proceed without revisiting the BRD?
+```
+
+---
+
+## Regression Protection Design
+
+Defines:
+
+- Logic Preservation
+- Approved Design Preservation
+- Traceability Preservation
+- Version Governance
+- Change Impact Awareness
+
+Answers:
+
+```text
+What existing knowledge must not be lost?
+```
 
 ---
 
@@ -300,7 +468,9 @@ Defines:
 
 Answers:
 
+```text
 Is there sufficient business context to begin report design?
+```
 
 ---
 
@@ -308,6 +478,7 @@ Is there sufficient business context to begin report design?
 
 The Decision Story Framework follows:
 
+```text
 Input Contract
 ↓
 Standards
@@ -319,6 +490,9 @@ Templates
 Agent
 ↓
 Governance
+↓
+Promotion
+```
 
 ---
 
@@ -326,7 +500,9 @@ Governance
 
 Define:
 
+```text
 What Good Looks Like
+```
 
 ---
 
@@ -334,7 +510,9 @@ What Good Looks Like
 
 Define:
 
+```text
 How To Apply Standards
+```
 
 ---
 
@@ -342,7 +520,9 @@ How To Apply Standards
 
 Define:
 
+```text
 What Must Be Produced
+```
 
 ---
 
@@ -350,7 +530,9 @@ What Must Be Produced
 
 Defines:
 
+```text
 How Framework Artifacts Are Executed
+```
 
 ---
 
@@ -358,7 +540,9 @@ How Framework Artifacts Are Executed
 
 Defines:
 
+```text
 How Outputs Are Evaluated
+```
 
 ---
 
@@ -367,6 +551,7 @@ How Outputs Are Evaluated
 Standards define:
 
 - Design Principles
+- Discovery Principles
 - Validation Rules
 - Traceability Rules
 - Governance Expectations
@@ -380,11 +565,13 @@ Templates define:
 
 Relationship:
 
+```text
 Standards
 ↓
 Templates
 ↓
 Artifacts
+```
 
 Templates must never override standards.
 
@@ -394,6 +581,13 @@ Templates must never override standards.
 
 All report design activities must follow:
 
+```text
+Business Problem
+↓
+Business Capability
+↓
+Business Outcome
+↓
 Decision
 ↓
 Business Question
@@ -407,11 +601,13 @@ Action
 Story
 ↓
 Visual
+```
 
 This sequence may not be reversed.
 
 Never start with:
 
+```text
 Visual
 ↓
 Layout
@@ -419,6 +615,82 @@ Layout
 Dashboard
 ↓
 Decision
+```
+
+---
+
+# Outcome Traceability Chain
+
+Every design must support:
+
+```text
+Business Problem
+↓
+Capability
+↓
+Outcome
+↓
+Decision
+↓
+Question
+↓
+Signal
+↓
+Threshold
+↓
+Action
+↓
+Story
+↓
+Visual
+```
+
+No break is allowed in the traceability chain.
+
+---
+
+# Human Authority Principle
+
+The framework is:
+
+```text
+AI Assisted
+
+Human Governed
+```
+
+AI may:
+
+- Discover
+- Recommend
+- Analyze
+- Structure
+
+AI may not:
+
+- Approve Decisions
+- Own Decisions
+- Assume Accountability
+
+Final authority remains with designated business owners.
+
+---
+
+# Regression Protection Principle
+
+Approved logic must not be removed without justification.
+
+Protect:
+
+- Business Rules
+- Decision Logic
+- Approved Signals
+- Approved Thresholds
+- Approved Actions
+- Approved Stories
+- Approved Traceability
+
+Framework evolution must preserve proven capabilities whenever possible.
 
 ---
 
@@ -426,7 +698,9 @@ Decision
 
 The Standards folder is the:
 
+```text
 Source Of Truth
+```
 
 for Decision Story design.
 
@@ -438,9 +712,13 @@ Templates must never override standards.
 
 Examples must never override standards.
 
+Governance must evaluate against standards.
+
 When conflicts exist:
 
+```text
 Standards Win
+```
 
 ---
 
@@ -448,7 +726,9 @@ Standards Win
 
 The Decision Story Agent must apply:
 
-REPORT_DESIGN_STANDARDS_v2.0
+```text
+REPORT_DESIGN_STANDARDS_v2.1
+```
 
 before generating:
 
@@ -462,6 +742,13 @@ The standards must be applied before template population begins.
 # Validation
 
 Before approving Decision Story outputs verify:
+
+```text
+□ Business Problem Defined
+
+□ Business Capability Defined
+
+□ Business Outcomes Defined
 
 □ Primary Decision Defined
 
@@ -479,11 +766,22 @@ Before approving Decision Story outputs verify:
 
 □ Decision Traceability Preserved
 
+□ Outcome Traceability Preserved
+
+□ Human Authority Defined
+
+□ Failure Modes Identified
+
+□ Handoff Readiness Confirmed
+
+□ Regression Risks Reviewed
+
 □ Layout Validated
 
 □ Visual Recommendations Validated
 
 □ User Action Supported
+```
 
 ---
 
@@ -491,17 +789,32 @@ Before approving Decision Story outputs verify:
 
 The Standards folder succeeds when:
 
-Every Decision Story
+```text
+Every Business Problem
 
-follows the same rules,
+supports a Capability
 
-uses the same methodology,
+Every Capability
 
-preserves the same decision-driven philosophy,
+supports an Outcome
 
-maintains full traceability,
+Every Outcome
 
-and supports business action.
+supports a Decision
+
+Every Decision
+
+supports Business Action
+```
+
+and every Decision Story:
+
+- follows the same methodology
+- preserves the same decision-driven philosophy
+- maintains full traceability
+- remains human governed
+- protects approved logic
+- supports measurable business outcomes
 
 The result is:
 
@@ -509,6 +822,8 @@ The result is:
 - Governed
 - Repeatable
 - Traceable
+- Outcome-Driven
+- Human-Governed
 - Decision-Driven Report Design
 
 across all future implementations.

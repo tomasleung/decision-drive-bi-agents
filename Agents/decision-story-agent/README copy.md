@@ -2,7 +2,7 @@
 
 ## Decision-Driven BI Agent Platform
 
-Version: 1.2
+Version: 1.0
 
 Status: Approved
 
@@ -20,7 +20,6 @@ This README explains:
 - How to navigate the repository
 - Recommended read order
 - How the agent fits into the platform lifecycle
-- How execution outputs are managed
 
 ---
 
@@ -86,29 +85,33 @@ What should the report look like?
 decision-story-agent/
 
 ├── inputs/
-│
+
 ├── standards/
-│
+
 ├── guidelines/
-│
+
 ├── templates/
-│
+
 ├── contracts/
-│
+
 ├── governance/
-│
+
+├── examples/
+
+├── outputs/
+
 ├── test-run/
-│
+
 ├── PROJECT_INIT.md
-│
+
 ├── README.md
-│
+
 ├── AGENT_README.md
-│
+
 ├── SKILL_BLUEPRINT.md
-│
+
 ├── skill.md
-│
+
 └── CHANGELOG.md
 ```
 
@@ -147,9 +150,7 @@ Answers:
 ```text
 What exists in this repository?
 
-How should contributors navigate?
-
-Where should execution begin?
+Where should contributors start?
 ```
 
 ---
@@ -181,7 +182,7 @@ Agent Operating Specification
 Answers:
 
 ```text
-How does the agent operate?
+How does the agent work?
 
 What lifecycle stages exist?
 
@@ -201,312 +202,18 @@ Runtime Instructions
 Answers:
 
 ```text
-What should the AI execute?
+What should the AI do right now?
 
 How should execution occur?
 ```
 
 ---
 
-## inputs/
-
-Purpose:
-
-Input Contracts and Business Inputs
-
-Contains:
-
-```text
-INPUT_BRD_TEMPLATE
-
-INPUT_BRD_*
-```
-
-Purpose:
-
-```text
-Define what a valid BRD looks like.
-
-Provide the business context to be analyzed.
-```
-
----
-
-### INPUT_BRD_TEMPLATE
-
-Role:
-
-```text
-Input Contract
-```
-
-Defines:
-
-```text
-Required Structure
-
-Required Sections
-
-Readiness Requirements
-
-Promotion Criteria
-```
-
----
-
-### INPUT_BRD_*
-
-Role:
-
-```text
-Input Payload
-```
-
-Provides:
-
-```text
-Business Context
-
-Business Problems
-
-Business Outcomes
-
-Decisions
-
-Questions
-
-Signals
-
-Actions
-```
-
----
-
-## standards/
-
-Purpose:
-
-Design Standards
-
-Answers:
-
-```text
-What Good Looks Like?
-
-What must be designed?
-```
-
-Examples:
-
-```text
-REPORT_DESIGN_STANDARDS
-```
-
----
-
-## guidelines/
-
-Purpose:
-
-Execution Guidance
-
-Answers:
-
-```text
-How should standards be applied?
-
-How should discovery occur?
-
-How should stories be developed?
-```
-
-Examples:
-
-```text
-DECISION_STORY_GUIDELINES
-```
-
----
-
-## templates/
-
-Purpose:
-
-Output Contracts
-
-Answers:
-
-```text
-What outputs must be produced?
-
-How should outputs be structured?
-```
-
-Examples:
-
-```text
-01_REPORT_STORY_MATRIX_TEMPLATE
-
-02_REPORT_STORY_TEMPLATE
-```
-
----
-
-### REPORT_STORY_MATRIX_TEMPLATE
-
-Role:
-
-```text
-Output Contract
-```
-
-Defines:
-
-```text
-Required Matrix Structure
-
-Required Decision Coverage
-
-Required Signal Coverage
-
-Required Story Coverage
-```
-
----
-
-### REPORT_STORY_TEMPLATE
-
-Role:
-
-```text
-Output Contract
-```
-
-Defines:
-
-```text
-Required DSC Structure
-
-Required Narrative Coverage
-
-Required Traceability Coverage
-
-Required Story Coverage
-```
-
----
-
-## governance/
-
-Purpose:
-
-Generation Quality Governance
-
-Answers:
-
-```text
-What Good Looks Like?
-
-How is quality evaluated?
-
-What must be reviewed?
-
-What conditions cause failure?
-```
-
-Examples:
-
-```text
-DECISION_STORY_GOLD_OUTPUT_SPEC
-
-DECISION_STORY_REVIEW_CRITERIA
-
-DECISION_STORY_SCORING_MODEL
-```
-
-Governance is required during generation.
-
-Governance is not limited to review activities.
-
-Governance defines quality expectations before outputs are generated.
-
----
-
-## contracts/
-
-Purpose:
-
-Future Contract Definitions
-
-Examples:
-
-```text
-Input Contracts
-
-Output Contracts
-
-Inter-Agent Contracts
-
-Handoff Contracts
-```
-
-This folder may remain empty until contract artifacts are introduced.
-
----
-
-## test-run/
-
-Purpose:
-
-Execution Workspace
-
-Answers:
-
-```text
-Where are outputs generated?
-
-How are runs isolated?
-
-How are validation cycles tracked?
-```
-
-Every execution should create a new test run folder.
-
-Example:
-
-```text
-test-run/
-
-└── Test_Run_01_AnimalFlow/
-```
-
-Expected Contents:
-
-```text
-REPORT_STORY_MATRIX
-
-REPORT_STORY
-```
-
-Optional Contents:
-
-```text
-Execution Notes
-
-Validation Findings
-
-Review Notes
-```
-
-Execution runs must not overwrite previous runs.
-
----
-
 # Agent Lifecycle Position
 
-The Decision Story Agent is the first operational agent within the platform.
+The Decision Story Agent is the first platform agent.
 
-Platform Flow:
+Platform flow:
 
 ```text
 INPUT_BRD
@@ -535,28 +242,26 @@ Report Build Agent
 Primary Inputs:
 
 ```text
-INPUT_BRD_TEMPLATE
-
 INPUT_BRD
 ```
 
 Supporting Inputs:
 
 ```text
-Standards
+Business Discovery Contracts
 
-Guidelines
+Platform Standards
 
-Governance
+Decision-First Framework
 
-Templates
+RDLC Governance Rules
 ```
 
 ---
 
 # Outputs
 
-Generated Outputs:
+Primary Outputs:
 
 ```text
 REPORT_STORY_MATRIX
@@ -564,45 +269,7 @@ REPORT_STORY_MATRIX
 REPORT_STORY
 ```
 
-Generated outputs are created inside:
-
-```text
-test-run/
-```
-
-during execution.
-
----
-
-# Execution Model
-
-Execution follows:
-
-```text
-Validate Input Contract
-↓
-Validate Input Payload
-↓
-Load Governance
-↓
-Load Standards
-↓
-Load Guidelines
-↓
-Load Templates
-↓
-Execute Blueprint
-↓
-Generate REPORT_STORY_MATRIX
-↓
-Validate
-↓
-Generate REPORT_STORY
-↓
-Validate
-↓
-Store In Test Run
-```
+The outputs become the governing business design artifacts used by downstream agents.
 
 ---
 
@@ -612,10 +279,6 @@ The Decision Story Agent answers:
 
 ```text
 What business problem requires support?
-
-What business capability is being improved?
-
-What business outcomes matter?
 
 What decisions must be made?
 
@@ -641,16 +304,14 @@ The agent is responsible for:
 - Decision Discovery
 - Question Discovery
 - Signal Discovery
-- Threshold Design
-- Action Design
-- Story Design
+- Action Discovery
+- Story Discovery
 - Coverage Validation
 - Traceability Validation
 
 The agent is not responsible for:
 
 - UX Design
-- Visual Mockups
 - Technical Design
 - Data Modeling
 - Semantic Design
@@ -693,10 +354,6 @@ The agent must preserve:
 ```text
 Business Problem
 ↓
-Business Capability
-↓
-Business Outcome
-↓
 Decision
 ↓
 Question
@@ -710,7 +367,7 @@ Action
 Story
 ```
 
-The Decision Story Agent is responsible for establishing and preserving the traceability chain.
+The agent is the first platform component responsible for formally establishing this traceability chain.
 
 ---
 
@@ -721,12 +378,16 @@ Before reviewing this repository:
 Read:
 
 ```text
-01_PLATFORM_STARTUP_SOP
+README.md
+
+framework/README.md
+
+framework/standards/README.md
+
+agents/README.md
 ```
 
-After Platform Context has been established:
-
-Read this repository in the following order:
+Then read this repository in the following order:
 
 ```text
 PROJECT_INIT.md
@@ -736,15 +397,9 @@ README.md
 AGENT_README.md
 ↓
 SKILL_BLUEPRINT.md
+↓
+skill.md
 ```
-
-Execution begins after:
-
-```text
-02_AGENT_STARTUP_SOP
-```
-
-has completed successfully.
 
 ---
 
@@ -770,13 +425,12 @@ without:
 
 - Business Rediscovery
 - Missing Decisions
-- Missing Outcomes
 - Missing Questions
 - Missing Signals
 - Missing Actions
 - Broken Traceability
 
-while preserving governance, business intent, and decision context.
+while preserving governance and decision intent.
 
 ---
 
@@ -790,11 +444,4 @@ Read:
 AGENT_README.md
 ```
 
-to understand:
-
-- Agent Responsibilities
-- Inputs
-- Outputs
-- Lifecycle Ownership
-- Governance Model
-- Operating Model
+to understand the Decision Story Agent's responsibilities, inputs, outputs, lifecycle, and operating model in detail.

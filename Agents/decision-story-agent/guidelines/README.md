@@ -12,20 +12,28 @@ Guidelines define:
 
 - How To Apply Standards
 - How To Analyze Inputs
+- How To Discover Business Problems
+- How To Discover Business Capabilities
+- How To Discover Business Outcomes
 - How To Discover Decisions
 - How To Discover Questions
 - How To Discover Signals
 - How To Discover Actions
 - How To Design Stories
 - How To Validate Outputs
+- How To Assess Readiness
+- How To Prepare Handoffs
 
 The guidelines ensure Decision Story generation remains:
 
 - Consistent
 - Repeatable
 - Traceable
-- Business Driven
+- Outcome Driven
+- Decision Driven
 - Action Oriented
+- Human Governed
+- Promotion Ready
 
 across all projects.
 
@@ -47,17 +55,23 @@ Guidelines provide a repeatable methodology for transforming:
 
 Business Requirements
 ↓
+Business Context
+↓
+Business Outcomes
+↓
 Decision Framework
 ↓
 Story Framework
 ↓
 Decision Story Contract
 
+into a governed business design.
+
 ---
 
 # Current Guidelines
 
-## DECISION_STORY_GUIDELINES_v2.0
+## DECISION_STORY_GUIDELINES_v2.1
 
 Purpose:
 
@@ -65,16 +79,21 @@ Provide the official Decision Story discovery and design methodology.
 
 The guideline defines:
 
+- Foundation Discovery
+- Business Outcome Discovery
 - BRD Analysis
 - Decision Discovery
+- Human Authority Discovery
 - Question Discovery
 - Signal Discovery
 - Threshold Design
 - Action Discovery
 - Story Construction
 - Coverage Discovery
+- Failure Mode Discovery
 - Traceability Validation
-- Handoff Rules
+- Handoff Readiness
+- Regression Protection
 
 The guideline defines:
 
@@ -85,6 +104,39 @@ during execution.
 ---
 
 # Guideline Coverage
+
+## Foundation Discovery
+
+Defines:
+
+- Business Problem Discovery
+- Business Capability Discovery
+- Strategic Alignment Discovery
+- Assumption Discovery
+- Constraint Discovery
+- Risk Discovery
+
+Answers:
+
+Why does this report exist?
+
+---
+
+## Business Outcome Discovery
+
+Defines:
+
+- Outcome Discovery
+- Outcome Ownership
+- Outcome Measurement
+- Success Target Discovery
+- Outcome Validation
+
+Answers:
+
+What business result should improve?
+
+---
 
 ## BRD Analysis
 
@@ -114,6 +166,22 @@ Defines:
 Answers:
 
 What decisions should be supported?
+
+---
+
+## Human Authority Discovery
+
+Defines:
+
+- Decision Owner Discovery
+- Decision Authority Discovery
+- Approval Authority Discovery
+- Escalation Authority Discovery
+- Accountability Validation
+
+Answers:
+
+Who owns the decision?
 
 ---
 
@@ -203,6 +271,7 @@ Defines:
 - Data Quality Coverage
 - Regional Coverage
 - Executive Coverage
+- Outcome Coverage
 
 Answers:
 
@@ -210,10 +279,27 @@ Has the business problem been fully covered?
 
 ---
 
+## Failure Mode Discovery
+
+Defines:
+
+- Decision Failure Discovery
+- Signal Failure Discovery
+- Data Trust Failure Discovery
+- Operational Failure Discovery
+- Outcome Failure Discovery
+
+Answers:
+
+What could go wrong?
+
+---
+
 ## Traceability
 
 Defines:
 
+- Outcome Traceability
 - Decision Traceability
 - Question Traceability
 - Signal Traceability
@@ -222,7 +308,38 @@ Defines:
 
 Answers:
 
-Can every design artifact be traced back to a decision?
+Can every design artifact be traced back to a business outcome and decision?
+
+---
+
+## Handoff Readiness
+
+Defines:
+
+- Mockup Readiness
+- TRD Readiness
+- Semantic Readiness
+- Build Readiness
+
+Answers:
+
+Can downstream teams proceed without revisiting discovery?
+
+---
+
+## Regression Protection
+
+Defines:
+
+- Existing Logic Review
+- Existing Signal Review
+- Existing Decision Review
+- Existing Story Review
+- Change Impact Review
+
+Answers:
+
+What approved logic must be preserved?
 
 ---
 
@@ -230,12 +347,14 @@ Can every design artifact be traced back to a decision?
 
 Defines:
 
+- Outcome Validation
 - Decision Validation
 - Question Validation
 - Signal Validation
 - Action Validation
 - Story Validation
 - Traceability Validation
+- Readiness Validation
 
 Answers:
 
@@ -258,6 +377,8 @@ Templates
 Agent
 ↓
 Governance
+↓
+Promotion
 
 ---
 
@@ -344,6 +465,10 @@ All design activities should follow:
 
 Business Problem
 ↓
+Business Capability
+↓
+Business Outcome
+↓
 Decision
 ↓
 Question
@@ -359,6 +484,59 @@ Story
 Visual
 
 This sequence should remain traceable throughout the design process.
+
+---
+
+# Outcome Traceability Chain
+
+All discovery activities should support:
+
+Business Problem
+↓
+Business Capability
+↓
+Business Outcome
+↓
+Decision
+↓
+Question
+↓
+Signal
+↓
+Threshold
+↓
+Action
+↓
+Story
+↓
+Visual
+
+No break in the chain is permitted.
+
+---
+
+# Human Authority Principle
+
+The framework is:
+
+AI Assisted
+↓
+Human Governed
+
+AI may:
+
+- Discover
+- Analyze
+- Recommend
+- Structure
+
+AI may not:
+
+- Own Decisions
+- Approve Outcomes
+- Assume Accountability
+
+Final authority remains with business stakeholders.
 
 ---
 
@@ -386,11 +564,11 @@ Guidelines Direct Execution
 
 The Decision Story Agent must apply:
 
-DECISION_STORY_GUIDELINES_v2.0
+DECISION_STORY_GUIDELINES_v2.1
 
 after reviewing:
 
-REPORT_DESIGN_STANDARDS_v2.0
+REPORT_DESIGN_STANDARDS_v2.1
 
 and before populating:
 
@@ -405,9 +583,17 @@ Before generating outputs verify:
 
 □ Business Problem Understood
 
+□ Business Capability Defined
+
+□ Business Outcomes Defined
+
+□ Outcome Owner Defined
+
 □ Primary Decision Defined
 
 □ Secondary Decisions Defined
+
+□ Human Authority Defined
 
 □ Question Coverage Complete
 
@@ -419,7 +605,13 @@ Before generating outputs verify:
 
 □ Story Coverage Complete
 
+□ Failure Modes Reviewed
+
 □ Traceability Preserved
+
+□ Handoff Readiness Confirmed
+
+□ Regression Risks Reviewed
 
 ---
 
@@ -435,6 +627,10 @@ uses the same design methodology,
 
 maintains full traceability,
 
+preserves accountability,
+
+supports measurable outcomes,
+
 and consistently converts business requirements into decision-focused artifacts.
 
 The result is:
@@ -443,7 +639,10 @@ The result is:
 - Governed
 - Repeatable
 - Traceable
-- Action-Oriented
-- Decision-Driven Design
+- Outcome Driven
+- Human Governed
+- Action Oriented
+- Decision Driven
+- Promotion Ready Design
 
 across all future implementations.
